@@ -825,17 +825,18 @@ export default function LayoutSection({
   };
 
   // Margin values (supports l, t, r, b with fallback to h, v) - resolved with theme tokens
-  const marLeft = Math.round(resolveNumeric(layout.margin?.l ?? layout.margin?.h ?? 0, tokens) || 0);
-  const marTop = Math.round(resolveNumeric(layout.margin?.t ?? layout.margin?.v ?? 0, tokens) || 0);
-  const marRight = Math.round(resolveNumeric(layout.margin?.r ?? layout.margin?.h ?? 0, tokens) || 0);
-  const marBottom = Math.round(resolveNumeric(layout.margin?.b ?? layout.margin?.v ?? 0, tokens) || 0);
+  const nodeMar = layout.margin || node.margin || (node.rawStyle ? parseBoxEdges(node.rawStyle, "margin") : null);
+  const marLeft = Math.round(resolveNumeric(nodeMar?.l ?? nodeMar?.left ?? nodeMar?.h ?? 0, tokens) || 0);
+  const marTop = Math.round(resolveNumeric(nodeMar?.t ?? nodeMar?.top ?? nodeMar?.v ?? 0, tokens) || 0);
+  const marRight = Math.round(resolveNumeric(nodeMar?.r ?? nodeMar?.right ?? nodeMar?.h ?? 0, tokens) || 0);
+  const marBottom = Math.round(resolveNumeric(nodeMar?.b ?? nodeMar?.bottom ?? nodeMar?.v ?? 0, tokens) || 0);
 
   // Custom on one side: if any side differs from its counterpart, automatically activate individual margin
   const isCustomMargin =
     marLeft !== marRight ||
     marTop !== marBottom ||
-    (layout.margin?.l !== undefined && layout.margin?.r !== undefined && layout.margin.l !== layout.margin.r) ||
-    (layout.margin?.t !== undefined && layout.margin?.b !== undefined && layout.margin.t !== layout.margin.b);
+    (nodeMar?.l !== undefined && nodeMar?.r !== undefined && nodeMar.l !== nodeMar.r) ||
+    (nodeMar?.t !== undefined && nodeMar?.b !== undefined && nodeMar.t !== nodeMar.b);
 
   useEffect(() => {
     if (isCustomMargin) {
@@ -845,16 +846,16 @@ export default function LayoutSection({
 
   const toggleIndividualMargin = () => {
     if (individualMargin) {
-      patchNodeLayout(node.id, {
-        margin: {
-          h: marLeft,
-          v: marTop,
-          l: marLeft,
-          r: marLeft,
-          t: marTop,
-          b: marTop,
-        },
-      });
+      const uniformMar = {
+        h: marLeft,
+        v: marTop,
+        l: marLeft,
+        r: marLeft,
+        t: marTop,
+        b: marTop,
+      };
+      patchNodeLayout(node.id, { margin: uniformMar });
+      patchNode(node.id, { margin: uniformMar });
       setIndividualMargin(false);
     } else {
       setIndividualMargin(true);
@@ -868,26 +869,32 @@ export default function LayoutSection({
     } else if (typeof val === "string" && !isNaN(Number(val))) {
       resolved = Math.max(0, Math.round(Number(val)));
     }
+    let nextMar;
     if (!individualMargin) {
       if (side === "h" || side === "l" || side === "r") {
-        patchNodeLayout(node.id, {
-          margin: { ...layout.margin, h: resolved, l: resolved, r: resolved },
-        });
+        nextMar = { ...(layout.margin || nodeMar || {}), h: resolved, l: resolved, r: resolved };
       } else {
-        patchNodeLayout(node.id, {
-          margin: { ...layout.margin, v: resolved, t: resolved, b: resolved },
-        });
+        nextMar = { ...(layout.margin || nodeMar || {}), v: resolved, t: resolved, b: resolved };
       }
-      return;
+    } else {
+      nextMar = {
+        l: nodeMar?.l ?? nodeMar?.left ?? nodeMar?.h ?? 0,
+        t: nodeMar?.t ?? nodeMar?.top ?? nodeMar?.v ?? 0,
+        r: nodeMar?.r ?? nodeMar?.right ?? nodeMar?.h ?? 0,
+        b: nodeMar?.b ?? nodeMar?.bottom ?? nodeMar?.v ?? 0,
+        [side]: resolved,
+      };
     }
-    const current = {
-      l: layout.margin?.l ?? layout.margin?.h ?? 0,
-      t: layout.margin?.t ?? layout.margin?.v ?? 0,
-      r: layout.margin?.r ?? layout.margin?.h ?? 0,
-      b: layout.margin?.b ?? layout.margin?.v ?? 0,
-      [side]: resolved,
-    };
-    patchNodeLayout(node.id, { margin: current });
+    patchNodeLayout(node.id, { margin: nextMar });
+    const cleanRaw = { ...(node.rawStyle || {}) };
+    delete cleanRaw.margin;
+    delete cleanRaw["margin-top"];
+    delete cleanRaw["margin-right"];
+    delete cleanRaw["margin-bottom"];
+    delete cleanRaw["margin-left"];
+    delete cleanRaw["margin-block"];
+    delete cleanRaw["margin-inline"];
+    patchNode(node.id, { margin: nextMar, rawStyle: cleanRaw });
   };
 
   const handleMarginIconScrub = (e, side) => {
@@ -2705,7 +2712,7 @@ export default function LayoutSection({
                       </svg>
                     </span>
                     <ScrubbableNumberInput
-                      value={individualMargin ? marLeft : (layout.margin?.h ?? marLeft)}
+                      value={individualMargin ? marLeft : (nodeMar?.h ?? marLeft)}
                       min={0}
                       onFocus={() => {
                         setMarginMenuOpen(individualMargin ? "l" : "h");
@@ -2735,7 +2742,7 @@ export default function LayoutSection({
                     {renderMarginDropdown(
                       individualMargin ? "l" : "h",
                       individualMargin ? "Left margin" : "Horizontal margin",
-                      individualMargin ? marLeft : (layout.margin?.h ?? marLeft)
+                      individualMargin ? marLeft : (nodeMar?.h ?? marLeft)
                     )}
                   </div>
 
@@ -2762,7 +2769,7 @@ export default function LayoutSection({
                       </svg>
                     </span>
                     <ScrubbableNumberInput
-                      value={individualMargin ? marTop : (layout.margin?.v ?? marTop)}
+                      value={individualMargin ? marTop : (nodeMar?.v ?? marTop)}
                       min={0}
                       onFocus={() => {
                         setMarginMenuOpen(individualMargin ? "t" : "v");
@@ -2792,7 +2799,7 @@ export default function LayoutSection({
                     {renderMarginDropdown(
                       individualMargin ? "t" : "v",
                       individualMargin ? "Top margin" : "Vertical margin",
-                      individualMargin ? marTop : (layout.margin?.v ?? marTop)
+                      individualMargin ? marTop : (nodeMar?.v ?? marTop)
                     )}
                   </div>
 

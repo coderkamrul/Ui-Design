@@ -5788,7 +5788,7 @@ export default function Viewport() {
                           />
                         )}
 
-                        {/* Exact center purple dash */}
+                        {/* Exact center purple dash (visible on hover / active) */}
                         <div
                           className="pointer-events-none absolute transition-opacity duration-150"
                           style={{
@@ -5799,7 +5799,7 @@ export default function Viewport() {
                             height: 2,
                             borderRadius: 2,
                             background: "#A855F7",
-                            opacity: isDraggingGap ? 0 : isHoveredGap ? 1 : 0.35,
+                            opacity: isDraggingGap ? 0 : (isHoveredGap || isThisGapActive) ? 1 : 0,
                             boxShadow: isHoveredGap ? "0 0.5px 2px rgba(168, 85, 247, 0.4)" : "none",
                           }}
                         />
@@ -5861,7 +5861,7 @@ export default function Viewport() {
                           />
                         )}
 
-                        {/* Exact center purple vertical dash */}
+                        {/* Exact center purple vertical dash (visible on hover / active) */}
                         <div
                           className="pointer-events-none absolute transition-opacity duration-150"
                           style={{
@@ -5872,7 +5872,7 @@ export default function Viewport() {
                             height: 18,
                             borderRadius: 2,
                             background: "#A855F7",
-                            opacity: isDraggingGap ? 0 : isHoveredGap ? 1 : 0.35,
+                            opacity: isDraggingGap ? 0 : (isHoveredGap || isThisGapActive) ? 1 : 0,
                             boxShadow: isHoveredGap ? "0 0.5px 2px rgba(168, 85, 247, 0.4)" : "none",
                           }}
                         />

@@ -338,24 +338,26 @@ function styleProps(node, tokens) {
   if (node.minHeight) {
     out.minHeight = typeof node.minHeight === "number" ? `${node.minHeight}px` : node.minHeight;
   }
-  if (node.centerX) {
-    out.marginLeft = "auto";
-    out.marginRight = "auto";
-  }
-  if (node.centerY) {
-    out.marginTop = "auto";
-    out.marginBottom = "auto";
-  }
-
   // Margin (from layout.margin or margin)
   const marginLayout = node.layout?.margin ?? node.margin;
   if (marginLayout) {
     const marTop = resolveNumeric(marginLayout.t ?? marginLayout.v ?? 0, tokens);
-    const marRight = resolveNumeric(marginLayout.r ?? marginLayout.h ?? 0, tokens);
     const marBottom = resolveNumeric(marginLayout.b ?? marginLayout.v ?? 0, tokens);
-    const marLeft = resolveNumeric(marginLayout.l ?? marginLayout.h ?? 0, tokens);
-    if (marTop || marRight || marBottom || marLeft) {
-      out.margin = `${marTop}px ${marRight}px ${marBottom}px ${marLeft}px`;
+    const isAutoH = Boolean(node.centerX || marginLayout.autoH || (marginLayout.auto && marginLayout.auto.left && marginLayout.auto.right) || marginLayout.l === "auto" || marginLayout.r === "auto");
+    const isAutoV = Boolean(node.centerY || marginLayout.autoV || (marginLayout.auto && marginLayout.auto.top && marginLayout.auto.bottom) || marginLayout.t === "auto" || marginLayout.b === "auto");
+    
+    out.marginTop = isAutoV ? "auto" : (marTop ? `${marTop}px` : undefined);
+    out.marginRight = isAutoH ? "auto" : (marginLayout.r ? `${resolveNumeric(marginLayout.r ?? marginLayout.h ?? 0, tokens)}px` : undefined);
+    out.marginBottom = isAutoV ? "auto" : (marBottom ? `${marBottom}px` : undefined);
+    out.marginLeft = isAutoH ? "auto" : (marginLayout.l ? `${resolveNumeric(marginLayout.l ?? marginLayout.h ?? 0, tokens)}px` : undefined);
+  } else {
+    if (node.centerX) {
+      out.marginLeft = "auto";
+      out.marginRight = "auto";
+    }
+    if (node.centerY) {
+      out.marginTop = "auto";
+      out.marginBottom = "auto";
     }
   }
 
@@ -1453,8 +1455,7 @@ export default function CanvasNode({
         box.minWidth = box.width;
       }
     } else if (node.type === "text" && (nodeSize.w?.kind === "fit" || nodeSize.w?.kind === "auto")) {
-      const isNowrap = Boolean(node.text?.truncation || node.text?.wrap === "none" || node.text?.wrap === "nowrap" || node.rawStyle?.["white-space"] === "nowrap");
-      box.width = isNowrap ? "fit-content" : (node.parentId ? "100%" : "fit-content");
+      box.width = "fit-content";
       box.maxWidth = node.text?.maxWidth ? `${node.text.maxWidth}px` : (node.parentId ? "100%" : undefined);
       box.minWidth = 0;
     } else if (node.type === "text") {
@@ -1550,8 +1551,7 @@ export default function CanvasNode({
         box.minWidth = box.width;
       }
     } else if (node.type === "text" && (nodeSize.w?.kind === "fit" || nodeSize.w?.kind === "auto")) {
-      const isNowrap = Boolean(node.text?.truncation || node.text?.wrap === "none" || node.text?.wrap === "nowrap" || node.rawStyle?.["white-space"] === "nowrap");
-      box.width = isNowrap ? "fit-content" : (node.parentId ? "100%" : "fit-content");
+      box.width = "fit-content";
       box.maxWidth = node.text?.maxWidth ? `${node.text.maxWidth}px` : (node.parentId ? "100%" : undefined);
       box.minWidth = 0;
     } else if (node.type === "text") {
