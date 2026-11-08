@@ -6,6 +6,7 @@ import { ScrubbableNumberInput, startScrubbing } from "./ScrubbableNumberInput";
 import { resolveNumeric, sizePx, resolveToken } from "@/lib/model";
 import { parseGridTracks, serializeGridTracks, defaultGrid } from "@/lib/grid";
 import { useEditorStore } from "@/lib/store";
+import { parseBoxEdges } from "@/lib/snapshot-import";
 
 function FlexibleSizeInput({ sizing, onChange, tokens, inputClassName }) {
   const getInitialStr = () => {
