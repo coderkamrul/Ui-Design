@@ -893,9 +893,11 @@ function TextNodeContent({ node, tokens, common }) {
   const activeTruncate = shouldTruncate && !isEditing;
 
   const hasMaxWidth = Boolean(node.rawStyle?.["max-width"] || t.maxWidth);
-  const isFillOrFixed = node.size?.w?.kind === "fixed" || node.size?.w?.kind === "fill" || hasMaxWidth;
-  const wrapMode = t.wrap || (isFillOrFixed ? "wrap" : "none");
-  const isNowrap = shouldTruncate || wrapMode === "none" || wrapMode === "nowrap" || (node.size?.w?.kind === "fit" && !t.content?.includes("\n") && !hasMaxWidth);
+  const rawWs = (node.rawStyle?.["white-space"] || node.rawStyle?.whiteSpace || "").toLowerCase();
+  const explicitNowrap = rawWs === "nowrap" || rawWs === "pre";
+
+  // Text wraps by default to follow parent width unless explicitly declared nowrap or active ellipsis
+  const isNowrap = activeTruncate || explicitNowrap || t.wrap === "none" || t.wrap === "nowrap";
 
   const textInnerStyle = {
     ...fillPropsAsColor(node, tokens),
@@ -1451,9 +1453,10 @@ export default function CanvasNode({
         box.minWidth = box.width;
       }
     } else if (node.type === "text" && (nodeSize.w?.kind === "fit" || nodeSize.w?.kind === "auto")) {
-      box.width = "fit-content";
-      box.maxWidth = node.text?.maxWidth ? `${node.text.maxWidth}px` : (node.parentId && (node.text?.wrap === "wrap" || node.text?.wrap === "break-word") ? "100%" : undefined);
-      delete box.minWidth;
+      const isNowrap = Boolean(node.text?.truncation || node.text?.wrap === "none" || node.text?.wrap === "nowrap" || node.rawStyle?.["white-space"] === "nowrap");
+      box.width = isNowrap ? "fit-content" : (node.parentId ? "100%" : "fit-content");
+      box.maxWidth = node.text?.maxWidth ? `${node.text.maxWidth}px` : (node.parentId ? "100%" : undefined);
+      box.minWidth = 0;
     } else if (node.type === "text") {
       box.width = flowSizeCss(nodeSize.w, tokens, node);
       if (node.text?.truncation || nodeSize.w?.kind === "fill") {
@@ -1547,8 +1550,10 @@ export default function CanvasNode({
         box.minWidth = box.width;
       }
     } else if (node.type === "text" && (nodeSize.w?.kind === "fit" || nodeSize.w?.kind === "auto")) {
-      box.width = "fit-content";
-      box.maxWidth = node.text?.maxWidth ? `${node.text.maxWidth}px` : (node.parentId && (node.text?.wrap === "wrap" || node.text?.wrap === "break-word") ? "100%" : undefined);
+      const isNowrap = Boolean(node.text?.truncation || node.text?.wrap === "none" || node.text?.wrap === "nowrap" || node.rawStyle?.["white-space"] === "nowrap");
+      box.width = isNowrap ? "fit-content" : (node.parentId ? "100%" : "fit-content");
+      box.maxWidth = node.text?.maxWidth ? `${node.text.maxWidth}px` : (node.parentId ? "100%" : undefined);
+      box.minWidth = 0;
     } else if (node.type === "text") {
       box.width = flowSizeCss(nodeSize.w, tokens, node);
       if (node.text?.truncation || nodeSize.w?.kind === "fill") {

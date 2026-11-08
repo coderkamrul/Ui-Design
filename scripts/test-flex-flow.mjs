@@ -44,7 +44,8 @@ const textChild = {
 };
 
 const textStyle = flexChildStyle(textChild, parentColumnLayout);
-assert.strictEqual(textStyle.width, 'max-content', 'Text child with cross-axis fit in column flex should have width: max-content');
+assert.strictEqual(textStyle.width, '100%', 'Text child with cross-axis fit in column flex should follow parent width (100%) so it wraps');
+assert.strictEqual(textStyle.maxWidth, '100%', 'Text child should have maxWidth: 100%');
 
 const frameChild = {
   type: 'frame',
