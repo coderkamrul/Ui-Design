@@ -3859,6 +3859,16 @@ export default function Viewport() {
       st.setSelectedAnchorIndex(0);
       return;
     }
+    // Double-click an image layer → trigger image replacement
+    if (node.type === "image") {
+      st.setSelection([hitId]);
+      window.dispatchEvent(
+        new CustomEvent("inspector:replace-image", {
+          detail: { id: hitId },
+        })
+      );
+      return;
+    }
     // Double-clicking top border of a parent frame on canvas
     if (node.type === "frame") {
       const rect = rectOf(st.doc.nodes, hitId);

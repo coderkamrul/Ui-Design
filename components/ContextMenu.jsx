@@ -528,6 +528,27 @@ export function ContextMenu({
 
           <div className="my-[3px] border-t border-[#E4E4E7]/80 dark:border-[#2E2E32]" />
 
+          {/* Replace image for single selected image */}
+          {selection.length === 1 && doc?.nodes?.[selection[0]]?.type === "image" && (
+            <button
+              type="button"
+              onPointerDown={(e) => e.stopPropagation()}
+              onClick={(e) =>
+                handleAction(() => {
+                  window.dispatchEvent(
+                    new CustomEvent("inspector:replace-image", { detail: { id: selection[0] } })
+                  );
+                }, e)
+              }
+              className="flex items-center justify-between px-2.5 py-0.5 h-[23px] rounded-[5px] text-left transition-colors hover:bg-[#F4F4F5] dark:hover:bg-[#2C2C2E] cursor-pointer text-[#222222] dark:text-[#EDEDED]"
+            >
+              <span>Replace image...</span>
+              <span className="text-[11px] font-sans text-[#8E8E93] dark:text-[#8E8E93]">
+                Double-click
+              </span>
+            </button>
+          )}
+
           {/* Duplicate & Copy */}
           <button
             type="button"

@@ -414,6 +414,8 @@ function fitCss(fit) {
       return "contain";
     case "fill":
       return "100% 100%";
+    case "tile":
+      return "auto";
     case "cover":
     default:
       return "cover";
@@ -1865,7 +1867,12 @@ export default function CanvasNode({
     );
   } else if (node.type === "image" || node.type === "video") {
     // Paints asset as background or as HTML5 video element when source is video
-    const url = node.image ? (assets[node.image.assetId] || node.image.url) : (node.video?.url || node.style?.fill?.url || undefined);
+    const imgFill = node.style?.fills?.find((f) => f && f.kind === "image" && f.visible !== false) || (node.style?.fill?.kind === "image" ? node.style.fill : null);
+    const url = (node.image ? (assets[node.image.assetId] || node.image.url) : null)
+      || (imgFill ? (assets[imgFill.assetId] || imgFill.url) : null)
+      || node.src
+      || (node.video?.url || node.style?.fill?.url || undefined);
+    const fit = imgFill?.fit || node.image?.fit || node.style?.fill?.fit || "cover";
     const isVideoFile = url && (/\.(mp4|webm|ogg|mov)(\?.*)?$/i.test(url) || node.type === "video");
 
     if (isVideoFile) {
@@ -1889,7 +1896,7 @@ export default function CanvasNode({
             style={{
               width: "100%",
               height: "100%",
-              objectFit: fitCss(node.image?.fit || node.video?.fit || "cover"),
+              objectFit: fit === "tile" ? "none" : fitCss(fit),
               pointerEvents: "none",
               display: "block",
             }}
@@ -1903,9 +1910,9 @@ export default function CanvasNode({
           style={{
             ...common,
             backgroundImage: url ? `url("${url}")` : undefined,
-            backgroundSize: fitCss(node.image?.fit),
+            backgroundSize: fitCss(fit),
             backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
+            backgroundRepeat: fit === "tile" ? "repeat" : "no-repeat",
             ...fillProps(node, tokens, assets),
             ...getRawStyleProps(node),
           }}
