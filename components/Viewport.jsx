@@ -4872,53 +4872,42 @@ export default function Viewport() {
       {singleRect &&
         editingPathId !== singleNode?.id &&
         (() => {
-          const scr = G.canvasRectToScreen(viewport, singleRect);
+          const rawScr = G.canvasRectToScreen(viewport, singleRect);
+          const scr = {
+            x: Number.isFinite(rawScr?.x) ? rawScr.x : 0,
+            y: Number.isFinite(rawScr?.y) ? rawScr.y : 0,
+            w: Number.isFinite(rawScr?.w) ? Math.max(0, rawScr.w) : 0,
+            h: Number.isFinite(rawScr?.h) ? Math.max(0, rawScr.h) : 0,
+          };
           const rot = nodeCanvasRotation(doc.nodes, singleNode?.id);
           const hasRot = rot % 360 !== 0;
           const originCenter = { x: scr.x + scr.w / 2, y: scr.y + scr.h / 2 };
           const isFlex = Boolean(singleNode?.layout?.mode === "flex" || singleNode?.layout?.mode === "grid");
 
-          const padT = Math.round(
-            (singleNode?.layout?.padding?.t ??
-              singleNode?.layout?.padding?.v ??
-              0) * viewport.zoom,
-          );
-          const padB = Math.round(
-            (singleNode?.layout?.padding?.b ??
-              singleNode?.layout?.padding?.v ??
-              0) * viewport.zoom,
-          );
-          const padL = Math.round(
-            (singleNode?.layout?.padding?.l ??
-              singleNode?.layout?.padding?.h ??
-              0) * viewport.zoom,
-          );
-          const padR = Math.round(
-            (singleNode?.layout?.padding?.r ??
-              singleNode?.layout?.padding?.h ??
-              0) * viewport.zoom,
-          );
+          const safeEdgeVal = (v) => {
+            if (typeof v === "number" && Number.isFinite(v)) return v;
+            if (typeof v === "string") {
+              const p = parseFloat(v);
+              if (Number.isFinite(p)) return p;
+            }
+            if (v && typeof v === "object" && typeof v.value === "number") return v.value;
+            return 0;
+          };
 
-          const rawPadT = formatPaddingVal(
-            singleNode?.layout?.padding?.t ??
-            singleNode?.layout?.padding?.v ??
-            0,
-          );
-          const rawPadB = formatPaddingVal(
-            singleNode?.layout?.padding?.b ??
-            singleNode?.layout?.padding?.v ??
-            0,
-          );
-          const rawPadL = formatPaddingVal(
-            singleNode?.layout?.padding?.l ??
-            singleNode?.layout?.padding?.h ??
-            0,
-          );
-          const rawPadR = formatPaddingVal(
-            singleNode?.layout?.padding?.r ??
-            singleNode?.layout?.padding?.h ??
-            0,
-          );
+          const rawPadTVal = safeEdgeVal(singleNode?.layout?.padding?.t ?? singleNode?.layout?.padding?.v);
+          const rawPadBVal = safeEdgeVal(singleNode?.layout?.padding?.b ?? singleNode?.layout?.padding?.v);
+          const rawPadLVal = safeEdgeVal(singleNode?.layout?.padding?.l ?? singleNode?.layout?.padding?.h);
+          const rawPadRVal = safeEdgeVal(singleNode?.layout?.padding?.r ?? singleNode?.layout?.padding?.h);
+
+          const padT = Math.round(rawPadTVal * (viewport.zoom || 1)) || 0;
+          const padB = Math.round(rawPadBVal * (viewport.zoom || 1)) || 0;
+          const padL = Math.round(rawPadLVal * (viewport.zoom || 1)) || 0;
+          const padR = Math.round(rawPadRVal * (viewport.zoom || 1)) || 0;
+
+          const rawPadT = formatPaddingVal(rawPadTVal);
+          const rawPadB = formatPaddingVal(rawPadBVal);
+          const rawPadL = formatPaddingVal(rawPadLVal);
+          const rawPadR = formatPaddingVal(rawPadRVal);
 
           const isContainer = singleNode?.type === "frame" || singleNode?.type === "group";
           const padObj = (singleNode && isContainer)
@@ -4937,47 +4926,40 @@ export default function Viewport() {
               ? sessionRef.current.side
               : hoveredPaddingSide;
 
-          const marT = Math.round(
-            (singleNode?.layout?.margin?.t ??
-              singleNode?.layout?.margin?.v ??
-              0) * viewport.zoom,
-          );
-          const marB = Math.round(
-            (singleNode?.layout?.margin?.b ??
-              singleNode?.layout?.margin?.v ??
-              0) * viewport.zoom,
-          );
-          const marL = Math.round(
-            (singleNode?.layout?.margin?.l ??
-              singleNode?.layout?.margin?.h ??
-              0) * viewport.zoom,
-          );
-          const marR = Math.round(
-            (singleNode?.layout?.margin?.r ??
-              singleNode?.layout?.margin?.h ??
-              0) * viewport.zoom,
-          );
-
-          const rawMarT = formatPaddingVal(
+          const rawMarTVal = safeEdgeVal(
             singleNode?.layout?.margin?.t ??
             singleNode?.layout?.margin?.v ??
-            0,
+            singleNode?.margin?.t ??
+            singleNode?.margin?.v
           );
-          const rawMarB = formatPaddingVal(
+          const rawMarBVal = safeEdgeVal(
             singleNode?.layout?.margin?.b ??
             singleNode?.layout?.margin?.v ??
-            0,
+            singleNode?.margin?.b ??
+            singleNode?.margin?.v
           );
-          const rawMarL = formatPaddingVal(
+          const rawMarLVal = safeEdgeVal(
             singleNode?.layout?.margin?.l ??
             singleNode?.layout?.margin?.h ??
-            0,
+            singleNode?.margin?.l ??
+            singleNode?.margin?.h
           );
-          const rawMarR = formatPaddingVal(
+          const rawMarRVal = safeEdgeVal(
             singleNode?.layout?.margin?.r ??
             singleNode?.layout?.margin?.h ??
-            0,
+            singleNode?.margin?.r ??
+            singleNode?.margin?.h
           );
+
+          const marT = Math.round(rawMarTVal * (viewport.zoom || 1)) || 0;
+          const marB = Math.round(rawMarBVal * (viewport.zoom || 1)) || 0;
+          const marL = Math.round(rawMarLVal * (viewport.zoom || 1)) || 0;
+          const marR = Math.round(rawMarRVal * (viewport.zoom || 1)) || 0;
+
+          const rawMarT = formatPaddingVal(rawMarTVal);
+          const rawMarB = formatPaddingVal(rawMarBVal);
+          const rawMarL = formatPaddingVal(rawMarLVal);
+          const rawMarR = formatPaddingVal(rawMarRVal);
 
           const hasMargin = Boolean(singleNode && singleNode.parentId);
 
