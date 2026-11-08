@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <!-- Classic Retro Text I-Beam Cursor -->
+  <!-- White Outline -->
+  <rect x="3" y="1" width="9" height="3" fill="#FFFFFF"/>
+  <rect x="6" y="4" width="3" height="11" fill="#FFFFFF"/>
+  <rect x="3" y="15" width="9" height="3" fill="#FFFFFF"/>
+  <!-- Black Core -->
+  <rect x="4" y="2" width="7" height="1" fill="#18181B"/>
+  <rect x="7" y="3" width="1" height="13" fill="#18181B"/>
+  <rect x="4" y="16" width="7" height="1" fill="#18181B"/>
+</svg>

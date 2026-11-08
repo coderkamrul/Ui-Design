@@ -1,0 +1,29 @@
+{
+  "name": "canvas-tool",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3100",
+    "dev:turbo": "next dev -p 3100 --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint app/"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.0",
+    "html-to-image": "^1.11.13",
+    "lucide-react": "^1.68.0",
+    "next": "15.5.29",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "zustand": "^5.0.16"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.29",
+    "jsdom": "^31.0.0",
+    "tailwindcss": "^4"
+  }
+}

@@ -1,0 +1,129 @@
+Created At: 2026-11-08T13:14:29+06:00
+Completed At: 2026-11-08T13:14:29+06:00
+The tool's output was truncated due to being too long. You can find the full output in a file at file:///C:/Users/h/.gemini/antigravity/brain/05eab66c-4a33-46de-82d6-52d18c2d2a36/.system_generated/steps/1784/output.txt.
+
+Here is a preview with the middle of the output truncated:
+Command exited with code 0.
+
+Command output:
+
+components\AddSvgModal.jsx:296:                Import SVG files, paste XML markup, or insert curated icons
+components\AddSvgModal.jsx:316:              { id: "code", label: "Paste Code", icon: Code },
+components\AddSvgModal.jsx:504:            {/* TAB 3: Paste Code */}
+components\AddSvgModal.jsx:509:                    Paste raw SVG, polygons, or path markup:
+components\ConnectAgentModal.jsx:465:                These rules are automatically delivered to your agent via MCP 
+initialize, or you can paste them into your custom AI instructions:
+components\ContextMenu.jsx:25:  onPaste,
+components\ContextMenu.jsx:26:  onPasteOnTop,
+components\ContextMenu.jsx:27:  onPasteToReplace,
+components\ContextMenu.jsx:30:  onPasteStyles,
+components\ContextMenu.jsx:203:            onClick={(e) => handleAction(() => onPaste && onPaste(), e)}
+components\ContextMenu.jsx:206:            <span>Paste</span>
+components\ContextMenu.jsx:833:            onClick={(e) => handleAction(() => onPaste && onPaste(targetId), e)}
+components\ContextMenu.jsx:836:            <span>Paste</span>
+components\ContextMenu.jsx:845:            onClick={(e) => handleAction(() => onPasteOnTop && onPasteOnTop(targetId), 
+e)}
+components\ContextMenu.jsx:848:            <span>Paste on top</span>
+components\ContextMenu.jsx:858:              handleAction(() => onPasteToReplace && onPasteToReplace(targetId), e)
+components\ContextMenu.jsx:862:            <span>Paste to replace</span>
+components\ContextMenu.jsx:901:                handleAction(() => onPasteStyles && onPasteStyles(targetId), e);
+components\ContextMenu.jsx:910:            <span>Paste styles</span>
+components\EditorShell.jsx:260: *  Disabled while a version preview is up (M7): the snapshot is
+components\EditorShell.jsx:578:  // disabled — the snapshot on canvas is not the live document.
+components\EditorShell.jsx:1091:  // M7: inert while a version preview is up (read-only snapshot).
+components\EditorShell.jsx:2674:  // M7: inert while a version preview is up (read-only snapshot).
+components\EditorShell.jsx:2877:      console.warn("canvas-tool: thumbnail snapshot skipped", snapErr);
+components\EditorShell.jsx:3468:  // is not our snapshot to claim; the peer's own client autosaves its
+components\HistoryPanel.jsx:15: * snapshot read-only; restore appends a "Before restore" safety
+components\HistoryPanel.jsx:16: * version and applies the snapshot as a normal, undoable commit.
+components\HistoryPanel.jsx:106:                : "Snapshot the current document as a version"
+components\Viewport.jsx:25: *   version's snapshot instead of the live doc and the canvas is
+components\Viewport.jsx:56:import { convertSnapshotToCanvasNodes } from "@/lib/snapshot-import";
+components\Viewport.jsx:263:  // snapshot (renderDoc) instead of the live doc, read-only.
+components\Viewport.jsx:279:  const pasteSeqRef = useRef(0); // paste cascade counter (M4)
+components\Viewport.jsx:304:  // hoverClose, historySnapshot } — the node already lives in the doc and
+components\Viewport.jsx:305:  // is updated transiently; the snapshot commits once on finish.
+components\Viewport.jsx:342:  const getPasteTargetPosition = (sourceBounds = { w: 200, h: 200 }) => {
+components\Viewport.jsx:390:    const paperHtml = `<html>\n<body>\n<!--StartFragment--><meta 
+charset="utf-8"><!--<paper-paste-start data-embed="${escapedJson}"></paper-paste-start>--><span 
+style="white-space:pre-wrap;">${plainText}</span><!--EndFragment-->\n</body>\n</html>`;
+components\Viewport.jsx:417:  const executePaste = async (clipboardText = null, clipItems = null, clipboardHtml = 
+null) => {
+components\Viewport.jsx:425:      // 1. If images are in clipboard items (from paste event)
+components\Viewport.jsx:431:              const target = getPasteTargetPosition({ w: 300, h: 200 });
+components\Viewport.jsx:450:                const file = new File([blob], `pasted-image.${ext}`, { type: imgType });
+components\Viewport.jsx:451:                const target = getPasteTargetPosition({ w: 300, h: 200 });
+components\Viewport.jsx:489:        const target = targetParent ? { x: 0, y: 0 } : getPasteTargetPosition({ w: 200, h: 
+200 });
+components\Viewport.jsx:503:      // 4. Check for Paper Design Snapshot (<x-paper-html>) or Paper embed payload
+components\Viewport.jsx:505:      if (!html && text && (text.includes("<x-paper-html") || 
+text.includes("paper-snapshot") || text.includes("paper-paste-start") || text.includes("data-embed=") || 
+text.includes("<header") || text.includes("<section") || text.includes("<div") || text.includes("<body") || 
+text.includes("<html"))) {
+components\Viewport.jsx:512:          html.includes("paper-snapshot") ||
+components\Viewport.jsx:513:          html.includes("paper-paste-start") ||
+components\Viewport.jsx:524:          const parsedFromHtml = await convertSnapshotToCanvasNodes(html, { measure: tru
+<truncated 9151 of 19047 bytes from the middle of the output>
+apshot",
+lib\htmlToCanvasNodes.js:611:        // In design snapshots, headings and single-line text should NEVER wrap into 
+individual letters
+lib\htmlToCanvasNodes.js:949:  // 3. Normalize all pasted layer colors (oklab, oklch, rgba) to clean design Hex 
+#RRGGBB + alpha
+lib\model.js:17: *   stream, version history = op ranges + snapshots.
+lib\persistence.js:13: *                             inside it — snapshots must not nest.
+lib\snapshot-import.js:1:// lib/snapshot-import.js — Snapshot / HTML paste importer (pure core).
+lib\snapshot-import.js:4:// produced by website-snapshot tools (full computed styles inlined on
+lib\snapshot-import.js:8:// ~/workspace/paper-design-spec/SNAPSHOT-PASTE-FULL-SOURCE-CHECK-2026-11-08.md
+lib\snapshot-import.js:20:// snapshot-import-test.mjs). In the browser the plain tree comes from
+lib\snapshot-import.js:26:// Known model adaptations (see README "Snapshot / HTML paste import"):
+lib\snapshot-import.js:40:// Clipboard classification (shared by paste + drop; order matters)
+lib\snapshot-import.js:79:  if (paper !== null) return { kind: "html", html: paper, source: "snapshot" };
+lib\snapshot-import.js:88:export const BIG_PASTE_HTML_CHARS = 100000;
+lib\snapshot-import.js:89:export const BIG_PASTE_NODES = 500;
+lib\snapshot-import.js:90:export function isBigPaste({ htmlLength = 0, nodeCount = 0 } = {}) {
+lib\snapshot-import.js:91:  return htmlLength >= BIG_PASTE_HTML_CHARS || nodeCount >= BIG_PASTE_NODES;
+lib\snapshot-import.js:792:// snapshot they are preserved verbatim in node.rawStyle (kebab-case).
+lib\snapshot-import.js:997:      const original = (c.attrs && c.attrs["paper-snapshot-original-tag"]) || c.tag;
+lib\snapshot-import.js:1075:  // Sizing — snapshots carry resolved px: Fixed. Never Fill (the flex
+lib\snapshot-import.js:1101:  // most snapshot elements carry no width/height in their style at
+lib\snapshot-import.js:1942: * Top-level async snapshot-to-canvas converter for clipboard / paste.
+lib\snapshot-import.js:1944:export async function convertSnapshotToCanvasNodes(html, { measure = true, exactLayout = 
+true } = {}) {
+lib\store.js:4: * M3 — history scheme (snapshot-based, see lib/history.js):
+lib\store.js:8: * `undo()` is just "swap the doc for the newest past snapshot, pushing the
+lib\store.js:17: *   Viewport captures a pre-gesture snapshot at pointer-down and calls
+lib\store.js:18: *   `commitSnapshot(snapshot)` once at pointer-up.
+lib\store.js:172:  startSnapshotNodes = null
+lib\store.js:184:    const baseChild = startSnapshotNodes?.[cid] || nodes[cid];
+lib\store.js:304:        startSnapshotNodes
+lib\store.js:320: * Push a pre-mutation snapshot of the current doc onto the undo stack.
+lib\store.js:470:   *  part of the doc: snapshots must never nest, version edits are not
+lib\store.js:688:   * Automatic snapshot, driven by the shell's autosave seam (it checks
+lib\store.js:732:   * draft/thread) so nothing on screen pretends the snapshot is live.
+lib\store.js:752:   * 2. The snapshot is applied as a NORMAL history commit (the
+lib\store.js:762:    if (!version || !version.snapshot) return;
+lib\store.js:763:    const restored = structuredClone(version.snapshot);
+lib\store.js:803:   * Push a snapshot captured BEFORE a drag gesture began (Viewport move /
+lib\store.js:806:  commitSnapshot: (snapshot) => {
+lib\store.js:808:    set({ history: applyCommit(s.history, makeEntry(snapshot, null)) });
+lib\store.js:1175:   *  setNodePositions + commitSnapshot instead. */
+lib\store.js:1224:   * variant below + commitSnapshot, like the other drag streams.
+lib\store.js:1237:   *  commit their pre-gesture snapshot once, at pointer-up). */
+lib\store.js:1543:  setNodeCanvasRect: (id, rect, handle = null, startSnapshot = null, startRect = null) => {
+lib\store.js:1572:    const baseParent = startSnapshot?.nodes?.[id] || n;
+lib\store.js:1618:        startSnapshot?.nodes
+lib\store.js:1677:  // the Viewport captures a pre-gesture snapshot and commits it ONCE via
+lib\store.js:1678:  // commitSnapshot when the gesture (or the whole pen drawing) finishes.
+lib\store.js:1831:   * patchNodeStyle) commits a snapshot that already includes the asset,
+lib\versions.js:8: * backends). A snapshot that contained the versions array would nest
+lib\versions.js:15: *     snapshot: <deep copy of the whole DesignFile> }
+lib\versions.js:31: * Build a version record from a document. The snapshot is a DEEP copy
+lib\versions.js:34: * the stored snapshot is never the live doc object either.
+lib\versions.js:43:  const snapshot = doc && typeof doc === "object" ? structuredClone(doc) : {};
+lib\versions.js:44:  delete snapshot.versions;
+lib\versions.js:58:    snapshot,
+lib\versions.js:86: * timestamp is treated as due (better a spare snapshot than none).
+lib\versions.js:95:/** { pages, nodes } counts for a version's snapshot (panel row meta). */
+lib\versions.js:97:  const snap = version?.snapshot;
+
+

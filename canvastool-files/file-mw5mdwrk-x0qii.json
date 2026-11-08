@@ -1,0 +1,5637 @@
+{
+  "id": "file-mw5mdwrk-x0qii",
+  "teamId": "team-my-team",
+  "title": "New Design Project",
+  "createdBy": "mcp-agent",
+  "updatedAt": "2026-11-07T07:35:10.750Z",
+  "tokens": [],
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Landing page for portfolio",
+      "background": "#0A0B10",
+      "rootNodeIds": [
+        "node-57"
+      ]
+    },
+    {
+      "id": "page-2",
+      "name": "Landing page for portfolio",
+      "background": "#0A0B10",
+      "rootNodeIds": [
+        "node-1"
+      ]
+    }
+  ],
+  "nodes": {
+    "node-1": {
+      "id": "node-1",
+      "type": "frame",
+      "name": "Portfolio - Graphic Designer",
+      "parentId": null,
+      "childIds": [
+        "node-2",
+        "node-11",
+        "node-21",
+        "node-34",
+        "node-37",
+        "node-52"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 56,
+        "padding": {
+          "l": 0,
+          "r": 0,
+          "t": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1440
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 2400
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#0A0B10"
+        },
+        "radius": 0,
+        "overflow": "hidden",
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#0A0B10"
+          }
+        ]
+      },
+      "clipContent": true
+    },
+    "node-2": {
+      "id": "node-2",
+      "type": "frame",
+      "name": "Navbar",
+      "parentId": "node-1",
+      "childIds": [
+        "node-3",
+        "node-4",
+        "node-9"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": -100,
+        "y": -100
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1312
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 60
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-3": {
+      "id": "node-3",
+      "type": "text",
+      "name": "Brand Logo",
+      "parentId": "node-2",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "KAMRUL HASAN / STUDIO",
+        "fontSize": 18,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 1.5,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-4": {
+      "id": "node-4",
+      "type": "frame",
+      "name": "Nav Links",
+      "parentId": "node-2",
+      "childIds": [
+        "node-5",
+        "node-6",
+        "node-7",
+        "node-8"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 32,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 480
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 36
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-5": {
+      "id": "node-5",
+      "type": "text",
+      "name": "Nav Item 1",
+      "parentId": "node-4",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#E2E8F0"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Selected Work",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#E2E8F0"
+      }
+    },
+    "node-6": {
+      "id": "node-6",
+      "type": "text",
+      "name": "Nav Item 2",
+      "parentId": "node-4",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#94A3B8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Visual Systems",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#94A3B8"
+      }
+    },
+    "node-7": {
+      "id": "node-7",
+      "type": "text",
+      "name": "Nav Item 3",
+      "parentId": "node-4",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#94A3B8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Exhibitions",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#94A3B8"
+      }
+    },
+    "node-8": {
+      "id": "node-8",
+      "type": "text",
+      "name": "Nav Item 4",
+      "parentId": "node-4",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#94A3B8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "About & Press",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#94A3B8"
+      }
+    },
+    "node-9": {
+      "id": "node-9",
+      "type": "frame",
+      "name": "Contact Button",
+      "parentId": "node-2",
+      "childIds": [
+        "node-10"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 140
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 42
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#181A24"
+        },
+        "radius": 999,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#2E334D",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#181A24"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-10": {
+      "id": "node-10",
+      "type": "text",
+      "name": "Btn Text",
+      "parentId": "node-9",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Get in Touch",
+        "fontSize": 13,
+        "fontWeight": 600,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-11": {
+      "id": "node-11",
+      "type": "frame",
+      "name": "Hero Section",
+      "parentId": "node-1",
+      "childIds": [
+        "node-12",
+        "node-14",
+        "node-15",
+        "node-16"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 24,
+        "padding": {
+          "l": 0,
+          "r": 0,
+          "t": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": -100,
+        "y": -100
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1312
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 440
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-12": {
+      "id": "node-12",
+      "type": "frame",
+      "name": "Availability Badge",
+      "parentId": "node-11",
+      "childIds": [
+        "node-13"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 8,
+        "padding": {
+          "l": 0,
+          "r": 0,
+          "t": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 270
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 32
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#064E3B"
+        },
+        "radius": 999,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#059669",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#064E3B"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-13": {
+      "id": "node-13",
+      "type": "text",
+      "name": "Status Text",
+      "parentId": "node-12",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#34D399"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "● AVAILABLE FOR COMMISSIONS 2026",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 1,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#34D399"
+      }
+    },
+    "node-14": {
+      "id": "node-14",
+      "type": "text",
+      "name": "Hero Title",
+      "parentId": "node-11",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1100
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 170
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#F8FAFC"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Visual Identity, Typography & Editorial Direction.",
+        "fontSize": 68,
+        "fontWeight": 800,
+        "lineHeight": 1.12,
+        "letterSpacing": -1.5,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#F8FAFC"
+      }
+    },
+    "node-15": {
+      "id": "node-15",
+      "type": "text",
+      "name": "Hero Subtitle",
+      "parentId": "node-11",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 780
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 56
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#94A3B8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Independent graphic designer and art director specializing in distinctive brand identities, bespoke typography, and avant-garde editorial publications for global cultural institutions.",
+        "fontSize": 17,
+        "fontWeight": 400,
+        "lineHeight": 1.55,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#94A3B8"
+      }
+    },
+    "node-16": {
+      "id": "node-16",
+      "type": "frame",
+      "name": "Hero Actions",
+      "parentId": "node-11",
+      "childIds": [
+        "node-17",
+        "node-19"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 16,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 420
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 52
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-17": {
+      "id": "node-17",
+      "type": "frame",
+      "name": "Primary CTA",
+      "parentId": "node-16",
+      "childIds": [
+        "node-18"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 190
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 48
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "radius": 8,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-18": {
+      "id": "node-18",
+      "type": "text",
+      "name": "CTA Text",
+      "parentId": "node-17",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#0A0B10"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "View Selected Work ↓",
+        "fontSize": 14,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#0A0B10"
+      }
+    },
+    "node-19": {
+      "id": "node-19",
+      "type": "frame",
+      "name": "Secondary CTA",
+      "parentId": "node-16",
+      "childIds": [
+        "node-20"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 170
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 48
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#151722"
+        },
+        "radius": 8,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#2B2F42",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#151722"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-20": {
+      "id": "node-20",
+      "type": "text",
+      "name": "CTA Text 2",
+      "parentId": "node-19",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#E2E8F0"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Studio Archive",
+        "fontSize": 14,
+        "fontWeight": 600,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#E2E8F0"
+      }
+    },
+    "node-21": {
+      "id": "node-21",
+      "type": "frame",
+      "name": "Stats Bar",
+      "parentId": "node-1",
+      "childIds": [
+        "node-22",
+        "node-25",
+        "node-28",
+        "node-31"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "r": 0,
+          "t": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": -100,
+        "y": -100
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1312
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 110
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#11131B"
+        },
+        "radius": 16,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#1E2232",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#11131B"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-22": {
+      "id": "node-22",
+      "type": "frame",
+      "name": "Stat 1",
+      "parentId": "node-21",
+      "childIds": [
+        "node-23",
+        "node-24"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 4,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 220
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 60
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-23": {
+      "id": "node-23",
+      "type": "text",
+      "name": "Number",
+      "parentId": "node-22",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "14+",
+        "fontSize": 30,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-24": {
+      "id": "node-24",
+      "type": "text",
+      "name": "Label",
+      "parentId": "node-22",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#64748B"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Years of Practice",
+        "fontSize": 12,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#64748B"
+      }
+    },
+    "node-25": {
+      "id": "node-25",
+      "type": "frame",
+      "name": "Stat 2",
+      "parentId": "node-21",
+      "childIds": [
+        "node-26",
+        "node-27"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 4,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 220
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 60
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-26": {
+      "id": "node-26",
+      "type": "text",
+      "name": "Number",
+      "parentId": "node-25",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "60+",
+        "fontSize": 30,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-27": {
+      "id": "node-27",
+      "type": "text",
+      "name": "Label",
+      "parentId": "node-25",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#64748B"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Brand Identities Delivered",
+        "fontSize": 12,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#64748B"
+      }
+    },
+    "node-28": {
+      "id": "node-28",
+      "type": "frame",
+      "name": "Stat 3",
+      "parentId": "node-21",
+      "childIds": [
+        "node-29",
+        "node-30"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 4,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 220
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 60
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-29": {
+      "id": "node-29",
+      "type": "text",
+      "name": "Number",
+      "parentId": "node-28",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "11",
+        "fontSize": 30,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-30": {
+      "id": "node-30",
+      "type": "text",
+      "name": "Label",
+      "parentId": "node-28",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#64748B"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "TDC & D&AD Awards",
+        "fontSize": 12,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#64748B"
+      }
+    },
+    "node-31": {
+      "id": "node-31",
+      "type": "frame",
+      "name": "Stat 4",
+      "parentId": "node-21",
+      "childIds": [
+        "node-32",
+        "node-33"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 4,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 220
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 60
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-32": {
+      "id": "node-32",
+      "type": "text",
+      "name": "Number",
+      "parentId": "node-31",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "100%",
+        "fontSize": 30,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-33": {
+      "id": "node-33",
+      "type": "text",
+      "name": "Label",
+      "parentId": "node-31",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#64748B"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Creative Ownership",
+        "fontSize": 12,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#64748B"
+      }
+    },
+    "node-34": {
+      "id": "node-34",
+      "type": "frame",
+      "name": "Projects Header",
+      "parentId": "node-1",
+      "childIds": [
+        "node-35",
+        "node-36"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": -100,
+        "y": -100
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1312
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-35": {
+      "id": "node-35",
+      "type": "text",
+      "name": "Section Title",
+      "parentId": "node-34",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#64748B"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "SELECTED RECENT COMMISSIONS",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 2,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#64748B"
+      }
+    },
+    "node-36": {
+      "id": "node-36",
+      "type": "text",
+      "name": "View All Link",
+      "parentId": "node-34",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#3B82F6"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Index of All Projects (34) →",
+        "fontSize": 13,
+        "fontWeight": 600,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#3B82F6"
+      }
+    },
+    "node-37": {
+      "id": "node-37",
+      "type": "frame",
+      "name": "Projects Grid Row 1",
+      "parentId": "node-1",
+      "childIds": [
+        "node-38",
+        "node-45"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 24,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": -100,
+        "y": -100
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1312
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 460
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-38": {
+      "id": "node-38",
+      "type": "frame",
+      "name": "Project Card - Lumina",
+      "parentId": "node-37",
+      "childIds": [
+        "node-39",
+        "node-42",
+        "node-44"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "r": 0,
+          "t": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 644
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 460
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#15102A"
+        },
+        "radius": 16,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#312E81",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#15102A"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-39": {
+      "id": "node-39",
+      "type": "frame",
+      "name": "Card Top",
+      "parentId": "node-38",
+      "childIds": [
+        "node-40",
+        "node-41"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 6,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 580
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 80
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-40": {
+      "id": "node-40",
+      "type": "text",
+      "name": "Project Year",
+      "parentId": "node-39",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A5B4FC"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "2026 — BRAND IDENTITY / CUSTOM TYPE",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 1.5,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#A5B4FC"
+      }
+    },
+    "node-41": {
+      "id": "node-41",
+      "type": "text",
+      "name": "Project Title",
+      "parentId": "node-39",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Lumina Spatial Audio",
+        "fontSize": 32,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-42": {
+      "id": "node-42",
+      "type": "frame",
+      "name": "Card Mockup Frame",
+      "parentId": "node-38",
+      "childIds": [
+        "node-43"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 580
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 220
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#22194D"
+        },
+        "radius": 12,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#4338CA",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#22194D"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-43": {
+      "id": "node-43",
+      "type": "text",
+      "name": "Art Mark",
+      "parentId": "node-42",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#C7D2FE"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "✦ LUMINA 360°",
+        "fontSize": 24,
+        "fontWeight": 900,
+        "lineHeight": 1.25,
+        "letterSpacing": 3,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#C7D2FE"
+      }
+    },
+    "node-44": {
+      "id": "node-44",
+      "type": "text",
+      "name": "Description",
+      "parentId": "node-38",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#94A3B8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Generative audio brand system and dynamic typeface for high-fidelity spatial hardware.",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#94A3B8"
+      }
+    },
+    "node-45": {
+      "id": "node-45",
+      "type": "frame",
+      "name": "Project Card - Velox",
+      "parentId": "node-37",
+      "childIds": [
+        "node-46",
+        "node-49",
+        "node-51"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "r": 0,
+          "t": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 644
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 460
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#0B1D28"
+        },
+        "radius": 16,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#164E63",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#0B1D28"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-46": {
+      "id": "node-46",
+      "type": "frame",
+      "name": "Card Top",
+      "parentId": "node-45",
+      "childIds": [
+        "node-47",
+        "node-48"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 6,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 580
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 80
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-47": {
+      "id": "node-47",
+      "type": "text",
+      "name": "Project Year",
+      "parentId": "node-46",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#67E8F9"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "2025 — EDITORIAL / EXHIBITION CATALOG",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 1.5,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#67E8F9"
+      }
+    },
+    "node-48": {
+      "id": "node-48",
+      "type": "text",
+      "name": "Project Title",
+      "parentId": "node-46",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Velox Kinetic Architecture",
+        "fontSize": 32,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-49": {
+      "id": "node-49",
+      "type": "frame",
+      "name": "Card Mockup Frame",
+      "parentId": "node-45",
+      "childIds": [
+        "node-50"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 580
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 220
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#103348"
+        },
+        "radius": 12,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#0E7490",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#103348"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-50": {
+      "id": "node-50",
+      "type": "text",
+      "name": "Art Mark",
+      "parentId": "node-49",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A5F3FC"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "▲ MONOGRAPH V",
+        "fontSize": 24,
+        "fontWeight": 900,
+        "lineHeight": 1.25,
+        "letterSpacing": 4,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#A5F3FC"
+      }
+    },
+    "node-51": {
+      "id": "node-51",
+      "type": "text",
+      "name": "Description",
+      "parentId": "node-45",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#94A3B8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "380-page dual-foil stamped monograph celebrating parametric pavilion engineering in Zurich.",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#94A3B8"
+      }
+    },
+    "node-52": {
+      "id": "node-52",
+      "type": "frame",
+      "name": "Commission Banner",
+      "parentId": "node-1",
+      "childIds": [
+        "node-53",
+        "node-54",
+        "node-55"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 20,
+        "padding": {
+          "l": 0,
+          "r": 0,
+          "t": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": -100,
+        "y": -100
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1312
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 280
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#131622"
+        },
+        "radius": 20,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#252B42",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#131622"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-53": {
+      "id": "node-53",
+      "type": "text",
+      "name": "Banner Subtitle",
+      "parentId": "node-52",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#3B82F6"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "READY TO ELEVATE YOUR BRAND?",
+        "fontSize": 12,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 2,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#3B82F6"
+      }
+    },
+    "node-54": {
+      "id": "node-54",
+      "type": "text",
+      "name": "Banner Title",
+      "parentId": "node-52",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "Let's craft something unforgettable together.",
+        "fontSize": 38,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-55": {
+      "id": "node-55",
+      "type": "frame",
+      "name": "Email CTA",
+      "parentId": "node-52",
+      "childIds": [
+        "node-56"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 280
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 48
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#3B82F6"
+        },
+        "radius": 999,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#3B82F6"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-56": {
+      "id": "node-56",
+      "type": "text",
+      "name": "Email Text",
+      "parentId": "node-55",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fit",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#1F1F1F"
+          }
+        ]
+      },
+      "text": {
+        "content": "contact@kamrulhasan.design →",
+        "fontSize": 14,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-57": {
+      "id": "node-57",
+      "type": "frame",
+      "name": "Portfolio - Graphic Designer",
+      "parentId": null,
+      "childIds": [
+        "node-58",
+        "node-67",
+        "node-77",
+        "node-90",
+        "node-93",
+        "node-106"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 56,
+        "padding": {
+          "l": 80,
+          "r": 80,
+          "t": 48,
+          "b": 80,
+          "h": 80,
+          "v": 64
+        },
+        "alignMain": "start",
+        "alignCross": "stretch"
+      },
+      "position": {
+        "x": 80,
+        "y": 80
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1440
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 2400
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#0A0B10"
+        },
+        "radius": 0,
+        "overflow": "hidden",
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#0A0B10"
+          }
+        ]
+      },
+      "clipContent": true
+    },
+    "node-58": {
+      "id": "node-58",
+      "type": "frame",
+      "name": "Navbar",
+      "parentId": "node-57",
+      "childIds": [
+        "node-59",
+        "node-60",
+        "node-65"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "space-between",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": -80,
+        "y": -80
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1280
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 56
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-59": {
+      "id": "node-59",
+      "type": "text",
+      "name": "Studio Logo",
+      "parentId": "node-58",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "KAMRUL HASAN / STUDIO",
+        "fontSize": 16,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 1.5,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-60": {
+      "id": "node-60",
+      "type": "frame",
+      "name": "Nav Items",
+      "parentId": "node-58",
+      "childIds": [
+        "node-61",
+        "node-62",
+        "node-63",
+        "node-64"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 32,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 420
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 36
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-61": {
+      "id": "node-61",
+      "type": "text",
+      "name": "Nav 1",
+      "parentId": "node-60",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "Selected Work",
+        "fontSize": 13,
+        "fontWeight": 600,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-62": {
+      "id": "node-62",
+      "type": "text",
+      "name": "Nav 2",
+      "parentId": "node-60",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#94A3B8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#94A3B8"
+          }
+        ]
+      },
+      "text": {
+        "content": "Visual Systems",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#94A3B8"
+      }
+    },
+    "node-63": {
+      "id": "node-63",
+      "type": "text",
+      "name": "Nav 3",
+      "parentId": "node-60",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#94A3B8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#94A3B8"
+          }
+        ]
+      },
+      "text": {
+        "content": "Exhibitions",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#94A3B8"
+      }
+    },
+    "node-64": {
+      "id": "node-64",
+      "type": "text",
+      "name": "Nav 4",
+      "parentId": "node-60",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#94A3B8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#94A3B8"
+          }
+        ]
+      },
+      "text": {
+        "content": "About & Press",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#94A3B8"
+      }
+    },
+    "node-65": {
+      "id": "node-65",
+      "type": "frame",
+      "name": "Header CTA Button",
+      "parentId": "node-58",
+      "childIds": [
+        "node-66"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 18,
+          "r": 18,
+          "t": 8,
+          "b": 8,
+          "h": 18,
+          "v": 8
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 40
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#181A26"
+        },
+        "radius": 999,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#2E334D",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#181A26"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-66": {
+      "id": "node-66",
+      "type": "text",
+      "name": "CTA Label",
+      "parentId": "node-65",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "Get in Touch",
+        "fontSize": 13,
+        "fontWeight": 600,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-67": {
+      "id": "node-67",
+      "type": "frame",
+      "name": "Hero Section",
+      "parentId": "node-57",
+      "childIds": [
+        "node-68",
+        "node-70",
+        "node-71",
+        "node-72"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 24,
+        "padding": {
+          "l": 0,
+          "r": 0,
+          "t": 24,
+          "b": 24,
+          "h": 0,
+          "v": 24
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": -80,
+        "y": -80
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1280
+        },
+        "h": {
+          "kind": "fit",
+          "px": 320
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-68": {
+      "id": "node-68",
+      "type": "frame",
+      "name": "Availability Badge",
+      "parentId": "node-67",
+      "childIds": [
+        "node-69"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 8,
+        "padding": {
+          "l": 14,
+          "r": 14,
+          "t": 6,
+          "b": 6,
+          "h": 14,
+          "v": 6
+        },
+        "alignMain": "start",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 32
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#064E3B"
+        },
+        "radius": 999,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#059669",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#064E3B"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-69": {
+      "id": "node-69",
+      "type": "text",
+      "name": "Status Text",
+      "parentId": "node-68",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#34D399"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#34D399"
+          }
+        ]
+      },
+      "text": {
+        "content": "● AVAILABLE FOR SELECT COMMISSIONS 2026",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 1,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#34D399"
+      }
+    },
+    "node-70": {
+      "id": "node-70",
+      "type": "text",
+      "name": "Hero Headline",
+      "parentId": "node-67",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1040
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "Visual Identity, Typography & Art Direction.",
+        "fontSize": 56,
+        "fontWeight": 800,
+        "lineHeight": 1.15,
+        "letterSpacing": -1,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-71": {
+      "id": "node-71",
+      "type": "text",
+      "name": "Hero Subtitle",
+      "parentId": "node-67",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 780
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#94A3B8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#94A3B8"
+          }
+        ]
+      },
+      "text": {
+        "content": "Independent graphic designer and art director crafting distinctive brand systems, bespoke typography, and avant-garde editorial publications for cultural institutions and progressive technology companies worldwide.",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "lineHeight": 1.6,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#94A3B8"
+      }
+    },
+    "node-72": {
+      "id": "node-72",
+      "type": "frame",
+      "name": "Buttons Row",
+      "parentId": "node-67",
+      "childIds": [
+        "node-73",
+        "node-75"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 16,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 440
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 50
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-73": {
+      "id": "node-73",
+      "type": "frame",
+      "name": "Primary Button",
+      "parentId": "node-72",
+      "childIds": [
+        "node-74"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 24,
+          "r": 24,
+          "t": 12,
+          "b": 12,
+          "h": 24,
+          "v": 12
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 46
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "radius": 8,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-74": {
+      "id": "node-74",
+      "type": "text",
+      "name": "Btn Text 1",
+      "parentId": "node-73",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#0A0B10"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#0A0B10"
+          }
+        ]
+      },
+      "text": {
+        "content": "Explore Selected Works ↓",
+        "fontSize": 14,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#0A0B10"
+      }
+    },
+    "node-75": {
+      "id": "node-75",
+      "type": "frame",
+      "name": "Secondary Button",
+      "parentId": "node-72",
+      "childIds": [
+        "node-76"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 22,
+          "r": 22,
+          "t": 12,
+          "b": 12,
+          "h": 22,
+          "v": 12
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 46
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#151724"
+        },
+        "radius": 8,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#2B2F45",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#151724"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-76": {
+      "id": "node-76",
+      "type": "text",
+      "name": "Btn Text 2",
+      "parentId": "node-75",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#E2E8F0"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#E2E8F0"
+          }
+        ]
+      },
+      "text": {
+        "content": "Studio Archive (PDF)",
+        "fontSize": 14,
+        "fontWeight": 600,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#E2E8F0"
+      }
+    },
+    "node-77": {
+      "id": "node-77",
+      "type": "frame",
+      "name": "Stats Bar",
+      "parentId": "node-57",
+      "childIds": [
+        "node-78",
+        "node-81",
+        "node-84",
+        "node-87"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 40,
+          "r": 40,
+          "t": 28,
+          "b": 28,
+          "h": 40,
+          "v": 28
+        },
+        "alignMain": "space-between",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": -80,
+        "y": -80
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1280
+        },
+        "h": {
+          "kind": "fit",
+          "px": 320
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#11131E"
+        },
+        "radius": 16,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#1E2235",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#11131E"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-78": {
+      "id": "node-78",
+      "type": "frame",
+      "name": "Stat 1",
+      "parentId": "node-77",
+      "childIds": [
+        "node-79",
+        "node-80"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 4,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 220
+        },
+        "h": {
+          "kind": "fit",
+          "px": 320
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-79": {
+      "id": "node-79",
+      "type": "text",
+      "name": "Num 1",
+      "parentId": "node-78",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "14+",
+        "fontSize": 32,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-80": {
+      "id": "node-80",
+      "type": "text",
+      "name": "Lbl 1",
+      "parentId": "node-78",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#64748B"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#64748B"
+          }
+        ]
+      },
+      "text": {
+        "content": "Years of Practice",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#64748B"
+      }
+    },
+    "node-81": {
+      "id": "node-81",
+      "type": "frame",
+      "name": "Stat 2",
+      "parentId": "node-77",
+      "childIds": [
+        "node-82",
+        "node-83"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 4,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 220
+        },
+        "h": {
+          "kind": "fit",
+          "px": 320
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-82": {
+      "id": "node-82",
+      "type": "text",
+      "name": "Num 2",
+      "parentId": "node-81",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "60+",
+        "fontSize": 32,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-83": {
+      "id": "node-83",
+      "type": "text",
+      "name": "Lbl 2",
+      "parentId": "node-81",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#64748B"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#64748B"
+          }
+        ]
+      },
+      "text": {
+        "content": "Brand Identities Built",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#64748B"
+      }
+    },
+    "node-84": {
+      "id": "node-84",
+      "type": "frame",
+      "name": "Stat 3",
+      "parentId": "node-77",
+      "childIds": [
+        "node-85",
+        "node-86"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 4,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 220
+        },
+        "h": {
+          "kind": "fit",
+          "px": 320
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-85": {
+      "id": "node-85",
+      "type": "text",
+      "name": "Num 3",
+      "parentId": "node-84",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "11",
+        "fontSize": 32,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-86": {
+      "id": "node-86",
+      "type": "text",
+      "name": "Lbl 3",
+      "parentId": "node-84",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#64748B"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#64748B"
+          }
+        ]
+      },
+      "text": {
+        "content": "TDC & D&AD Awards",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#64748B"
+      }
+    },
+    "node-87": {
+      "id": "node-87",
+      "type": "frame",
+      "name": "Stat 4",
+      "parentId": "node-77",
+      "childIds": [
+        "node-88",
+        "node-89"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 4,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 220
+        },
+        "h": {
+          "kind": "fit",
+          "px": 320
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-88": {
+      "id": "node-88",
+      "type": "text",
+      "name": "Num 4",
+      "parentId": "node-87",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "100%",
+        "fontSize": 32,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-89": {
+      "id": "node-89",
+      "type": "text",
+      "name": "Lbl 4",
+      "parentId": "node-87",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#64748B"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#64748B"
+          }
+        ]
+      },
+      "text": {
+        "content": "Independent Ownership",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#64748B"
+      }
+    },
+    "node-90": {
+      "id": "node-90",
+      "type": "frame",
+      "name": "Projects Header",
+      "parentId": "node-57",
+      "childIds": [
+        "node-91",
+        "node-92"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "space-between",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": -80,
+        "y": -80
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1280
+        },
+        "h": {
+          "kind": "fit",
+          "px": 320
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-91": {
+      "id": "node-91",
+      "type": "text",
+      "name": "Sec Title",
+      "parentId": "node-90",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#64748B"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#64748B"
+          }
+        ]
+      },
+      "text": {
+        "content": "SELECTED RECENT COMMISSIONS",
+        "fontSize": 12,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 2,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#64748B"
+      }
+    },
+    "node-92": {
+      "id": "node-92",
+      "type": "text",
+      "name": "Index Link",
+      "parentId": "node-90",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#38BDF8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#38BDF8"
+          }
+        ]
+      },
+      "text": {
+        "content": "Index of All Projects (34) →",
+        "fontSize": 13,
+        "fontWeight": 600,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#38BDF8"
+      }
+    },
+    "node-93": {
+      "id": "node-93",
+      "type": "frame",
+      "name": "Projects Grid",
+      "parentId": "node-57",
+      "childIds": [
+        "node-94",
+        "node-100"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 24,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "stretch"
+      },
+      "position": {
+        "x": -80,
+        "y": -80
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1280
+        },
+        "h": {
+          "kind": "fit",
+          "px": 320
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "transparent"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "transparent"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-94": {
+      "id": "node-94",
+      "type": "frame",
+      "name": "Card - Lumina",
+      "parentId": "node-93",
+      "childIds": [
+        "node-95",
+        "node-96",
+        "node-97",
+        "node-99"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 20,
+        "padding": {
+          "l": 32,
+          "r": 32,
+          "t": 32,
+          "b": 32,
+          "h": 32,
+          "v": 32
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 628
+        },
+        "h": {
+          "kind": "fit",
+          "px": 320
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#131024"
+        },
+        "radius": 16,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#2B2356",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#131024"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-95": {
+      "id": "node-95",
+      "type": "text",
+      "name": "Tag 1",
+      "parentId": "node-94",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A5B4FC"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A5B4FC"
+          }
+        ]
+      },
+      "text": {
+        "content": "2026 — BRAND IDENTITY / CUSTOM TYPE",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 1.5,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#A5B4FC"
+      }
+    },
+    "node-96": {
+      "id": "node-96",
+      "type": "text",
+      "name": "Title 1",
+      "parentId": "node-94",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "Lumina Spatial Audio",
+        "fontSize": 28,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-97": {
+      "id": "node-97",
+      "type": "frame",
+      "name": "Art Mockup 1",
+      "parentId": "node-94",
+      "childIds": [
+        "node-98"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 564
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 220
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#22194D"
+        },
+        "radius": 12,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#4338CA",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#22194D"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-98": {
+      "id": "node-98",
+      "type": "text",
+      "name": "Art 1",
+      "parentId": "node-97",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#C7D2FE"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#C7D2FE"
+          }
+        ]
+      },
+      "text": {
+        "content": "✦ LUMINA 360°",
+        "fontSize": 24,
+        "fontWeight": 900,
+        "lineHeight": 1.25,
+        "letterSpacing": 3,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#C7D2FE"
+      }
+    },
+    "node-99": {
+      "id": "node-99",
+      "type": "text",
+      "name": "Desc 1",
+      "parentId": "node-94",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 564
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#94A3B8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#94A3B8"
+          }
+        ]
+      },
+      "text": {
+        "content": "Generative audio brand system and dynamic variable typeface designed for high-fidelity spatial hardware.",
+        "fontSize": 14,
+        "fontWeight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#94A3B8"
+      }
+    },
+    "node-100": {
+      "id": "node-100",
+      "type": "frame",
+      "name": "Card - Velox",
+      "parentId": "node-93",
+      "childIds": [
+        "node-101",
+        "node-102",
+        "node-103",
+        "node-105"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 20,
+        "padding": {
+          "l": 32,
+          "r": 32,
+          "t": 32,
+          "b": 32,
+          "h": 32,
+          "v": 32
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 628
+        },
+        "h": {
+          "kind": "fit",
+          "px": 320
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#0B1D28"
+        },
+        "radius": 16,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#164E63",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#0B1D28"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-101": {
+      "id": "node-101",
+      "type": "text",
+      "name": "Tag 2",
+      "parentId": "node-100",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#67E8F9"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#67E8F9"
+          }
+        ]
+      },
+      "text": {
+        "content": "2025 — EDITORIAL / EXHIBITION CATALOG",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 1.5,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#67E8F9"
+      }
+    },
+    "node-102": {
+      "id": "node-102",
+      "type": "text",
+      "name": "Title 2",
+      "parentId": "node-100",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "Velox Kinetic Architecture",
+        "fontSize": 28,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-103": {
+      "id": "node-103",
+      "type": "frame",
+      "name": "Art Mockup 2",
+      "parentId": "node-100",
+      "childIds": [
+        "node-104"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 564
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 220
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#103348"
+        },
+        "radius": 12,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#0E7490",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#103348"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-104": {
+      "id": "node-104",
+      "type": "text",
+      "name": "Art 2",
+      "parentId": "node-103",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A5F3FC"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A5F3FC"
+          }
+        ]
+      },
+      "text": {
+        "content": "▲ MONOGRAPH V",
+        "fontSize": 24,
+        "fontWeight": 900,
+        "lineHeight": 1.25,
+        "letterSpacing": 4,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#A5F3FC"
+      }
+    },
+    "node-105": {
+      "id": "node-105",
+      "type": "text",
+      "name": "Desc 2",
+      "parentId": "node-100",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 564
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#94A3B8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#94A3B8"
+          }
+        ]
+      },
+      "text": {
+        "content": "380-page dual-foil stamped monograph celebrating parametric pavilion engineering and kinetic forms in Zurich.",
+        "fontSize": 14,
+        "fontWeight": 400,
+        "lineHeight": 1.5,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#94A3B8"
+      }
+    },
+    "node-106": {
+      "id": "node-106",
+      "type": "frame",
+      "name": "Commission Banner",
+      "parentId": "node-57",
+      "childIds": [
+        "node-107",
+        "node-108",
+        "node-109"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 20,
+        "padding": {
+          "l": 48,
+          "r": 48,
+          "t": 48,
+          "b": 48,
+          "h": 48,
+          "v": 48
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": -80,
+        "y": -80
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1280
+        },
+        "h": {
+          "kind": "fit",
+          "px": 320
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#131624"
+        },
+        "radius": 20,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#252B44",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#131624"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-107": {
+      "id": "node-107",
+      "type": "text",
+      "name": "Banner Subtitle",
+      "parentId": "node-106",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#38BDF8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#38BDF8"
+          }
+        ]
+      },
+      "text": {
+        "content": "READY TO ELEVATE YOUR BRAND?",
+        "fontSize": 12,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 2,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#38BDF8"
+      }
+    },
+    "node-108": {
+      "id": "node-108",
+      "type": "text",
+      "name": "Banner Title",
+      "parentId": "node-106",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "Let's craft something unforgettable together.",
+        "fontSize": 36,
+        "fontWeight": 800,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    },
+    "node-109": {
+      "id": "node-109",
+      "type": "frame",
+      "name": "Email CTA",
+      "parentId": "node-106",
+      "childIds": [
+        "node-110"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 28,
+          "r": 28,
+          "t": 12,
+          "b": 12,
+          "h": 28,
+          "v": 12
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 48
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#2563EB"
+        },
+        "radius": 999,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#2563EB"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-110": {
+      "id": "node-110",
+      "type": "text",
+      "name": "Email Text",
+      "parentId": "node-109",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "contact@kamrulhasan.design →",
+        "fontSize": 14,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Inter",
+        "color": "#FFFFFF"
+      }
+    }
+  },
+  "comments": [],
+  "assets": {}
+}

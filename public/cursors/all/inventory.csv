@@ -1,0 +1,33 @@
+name,source,bytes
+arrow,embedded data URI,892
+arrow-bend-edge,/static/cursors/cursor-arrow-bend-edge.webp,1134
+arrow-disable-mirroring,/static/cursors/cursor-arrow-disable-mirroring.webp,1162
+arrow-duplicate,embedded data URI,1210
+arrow-enable-mirroring,/static/cursors/cursor-arrow-enable-mirroring.webp,1150
+arrow-minus,embedded data URI,918
+arrow-plus,embedded data URI,954
+arrow-position-absolute,embedded data URI,956
+arrow-trash,embedded data URI,1140
+arrow-x,embedded data URI,1004
+arrow-xy,embedded data URI,1042
+arrow-y,embedded data URI,1044
+color-picker,embedded data URI,1450
+comment,embedded data URI,1018
+crosshair,embedded data URI,112
+crosshair-text,embedded data URI,384
+debug,/static/cursors/cursor-debug.webp,54
+eye-dropper,embedded data URI,1266
+hand-closed,embedded data URI,1046
+hand-open,embedded data URI,1236
+hand-pointer,embedded data URI,1082
+move,embedded data URI,1256
+pen,/static/cursors/cursor-pen.webp,1370
+resize-col,embedded data URI,1086
+resize-row,embedded data URI,1060
+resize-top-left,embedded data URI,898
+resize-top-right,embedded data URI,912
+resize-x,embedded data URI,936
+resize-y,embedded data URI,912
+scrubbing,embedded data URI,982
+zoom-in,embedded data URI,1436
+zoom-out,embedded data URI,1386
