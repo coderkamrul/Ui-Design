@@ -1266,6 +1266,14 @@ function TextNodeContent({ node, tokens, common }) {
     node.rawStyle?.visibility === "hidden"
   );
 
+  const rawProps = getRawStyleProps(node);
+  if (!isNowrap && rawProps.whiteSpace) {
+    delete rawProps.whiteSpace;
+  }
+  if ((node.size?.w?.kind === "fit" || node.size?.w?.kind === "auto" || !node.size?.w) && rawProps.width) {
+    delete rawProps.width;
+  }
+
   return (
     <>
       <div
@@ -1287,7 +1295,10 @@ function TextNodeContent({ node, tokens, common }) {
               : "flex-start",
           boxSizing: "border-box",
           cursor: isEditing ? "text" : common.cursor,
-          ...getRawStyleProps(node),
+          ...rawProps,
+          width: common.width,
+          maxWidth: common.maxWidth,
+          minWidth: 0,
           overflow: activeTruncate ? "hidden" : (node.rawStyle?.overflow || common.overflow || undefined),
         }}
       >
@@ -1393,9 +1404,11 @@ export default function CanvasNode({
   const isContainer = node.type === "frame" || isFlex || isGrid;
 
   // -- box geometry ---------------------------------------------------------
-  const nodeSize = node.size || {
-    w: { kind: "fixed", px: 100 },
-    h: { kind: "fixed", px: 100 },
+  const defaultWKind = node.wMode === "Fill" ? "fill" : (node.wMode === "Fit" || node.wMode === "Auto" || node.type === "text") ? "fit" : "fixed";
+  const defaultHKind = node.hMode === "Fill" ? "fill" : (node.hMode === "Fit" || node.hMode === "Auto" || node.type === "text") ? "fit" : "fixed";
+  const nodeSize = {
+    w: node.size?.w || { kind: defaultWKind, px: typeof node.w === "number" ? node.w : 100 },
+    h: node.size?.h || { kind: defaultHKind, px: typeof node.h === "number" ? node.h : 100 },
   };
   const rawNodeX = Number(node.position?.x ?? node.x ?? 0);
   const rawNodeY = Number(node.position?.y ?? node.y ?? 0);
@@ -1459,12 +1472,28 @@ export default function CanvasNode({
         box.width = (nodeSize.w?.px != null && nodeSize.w.px > 0) ? `${nodeSize.w.px}px` : "100px";
         box.minWidth = box.width;
       }
-    } else if (node.type === "text" && (nodeSize.w?.kind === "fit" || nodeSize.w?.kind === "auto")) {
-      box.width = "fit-content";
-      box.maxWidth = node.text?.maxWidth ? `${node.text.maxWidth}px` : (node.parentId ? "100%" : undefined);
+    } else if (node.type === "text" && (nodeSize.w?.kind === "fit" || nodeSize.w?.kind === "auto" || !node.size?.w)) {
+      const isNowrap = node.text?.wrap === "none" || node.text?.wrap === "nowrap";
+      box.width = isNowrap ? "max-content" : "fit-content";
+      const isAbs = !!(node.position?.absolute || node.absolutePosition);
+      if (isAbs) {
+        box.maxWidth = node.text?.maxWidth ? `${node.text.maxWidth}px` : undefined;
+      } else if (node.parentId) {
+        const posX = Math.max(0, nodePos.x);
+        box.maxWidth = node.text?.maxWidth
+          ? `${node.text.maxWidth}px`
+          : (posX > 0 ? `calc(100% - ${posX}px)` : "100%");
+      }
       box.minWidth = 0;
     } else if (node.type === "text") {
       box.width = flowSizeCss(nodeSize.w, tokens, node);
+      const isAbs = !!(node.position?.absolute || node.absolutePosition);
+      if (!isAbs && node.parentId) {
+        const posX = Math.max(0, nodePos.x);
+        box.maxWidth = node.text?.maxWidth
+          ? `${node.text.maxWidth}px`
+          : (posX > 0 ? `calc(100% - ${posX}px)` : "100%");
+      }
       if (node.text?.truncation || nodeSize.w?.kind === "fill") {
         box.minWidth = 0;
       }
@@ -1555,12 +1584,28 @@ export default function CanvasNode({
         box.width = (nodeSize.w?.px != null && nodeSize.w.px > 0) ? `${nodeSize.w.px}px` : "100px";
         box.minWidth = box.width;
       }
-    } else if (node.type === "text" && (nodeSize.w?.kind === "fit" || nodeSize.w?.kind === "auto")) {
-      box.width = "fit-content";
-      box.maxWidth = node.text?.maxWidth ? `${node.text.maxWidth}px` : (node.parentId ? "100%" : undefined);
+    } else if (node.type === "text" && (nodeSize.w?.kind === "fit" || nodeSize.w?.kind === "auto" || !node.size?.w)) {
+      const isNowrap = node.text?.wrap === "none" || node.text?.wrap === "nowrap";
+      box.width = isNowrap ? "max-content" : "fit-content";
+      const isAbs = !!(node.position?.absolute || node.absolutePosition);
+      if (isAbs) {
+        box.maxWidth = node.text?.maxWidth ? `${node.text.maxWidth}px` : undefined;
+      } else if (node.parentId) {
+        const posX = Math.max(0, nodePos.x);
+        box.maxWidth = node.text?.maxWidth
+          ? `${node.text.maxWidth}px`
+          : (posX > 0 ? `calc(100% - ${posX}px)` : "100%");
+      }
       box.minWidth = 0;
     } else if (node.type === "text") {
       box.width = flowSizeCss(nodeSize.w, tokens, node);
+      const isAbs = !!(node.position?.absolute || node.absolutePosition);
+      if (!isAbs && node.parentId) {
+        const posX = Math.max(0, nodePos.x);
+        box.maxWidth = node.text?.maxWidth
+          ? `${node.text.maxWidth}px`
+          : (posX > 0 ? `calc(100% - ${posX}px)` : "100%");
+      }
       if (node.text?.truncation || nodeSize.w?.kind === "fill") {
         box.minWidth = 0;
       }

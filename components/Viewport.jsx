@@ -3232,7 +3232,7 @@ export default function Viewport() {
                   y: Math.round(nRect.y - tfRect.y),
                   ...(isAbs ? { absolute: true } : {}),
                 };
-            reparents.push({ id, newParentId: targetFrameId, newPosition: newPos });
+            reparents.push({ id, newParentId: targetFrameId, newPosition: newPos, nRect });
           } else {
             reparents.push({
               id,
@@ -3241,6 +3241,7 @@ export default function Viewport() {
                 x: Math.round(nRect.x),
                 y: Math.round(nRect.y),
               },
+              nRect,
             });
           }
         }
@@ -3414,14 +3415,14 @@ export default function Viewport() {
                 x: Math.round(ghostRect.x - tfRect.x),
                 y: Math.round(ghostRect.y - tfRect.y),
               };
-          st.reparentNodeTransient(session.id, targetFrameId, newPos);
+          st.reparentNodeTransient(session.id, targetFrameId, newPos, null, ghostRect);
         } else if (!targetFrameId && session.isOutsideParent) {
           // Released on empty canvas
           st.commitSnapshot(session.historySnapshot);
           st.reparentNodeTransient(session.id, null, {
             x: Math.round(ghostRect.x),
             y: Math.round(ghostRect.y),
-          });
+          }, null, ghostRect);
         } else if (session.insertIndex != null) {
           const before = st.doc.nodes[session.parentId]?.childIds ?? [];
           st.reorderChildTransient(
