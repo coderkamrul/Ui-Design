@@ -3991,7 +3991,7 @@ const IGNORED_OTHER_STYLE_PROPS = new Set([
   "-webkit-text-fill-color", "-webkit-text-stroke-color",
 ]);
 
-function OtherStylesSection({ node, patchStyle }) {
+function OtherStylesSection({ node, patchStyle, patchNode }) {
   const style = node?.style ?? {};
   // Merge style.customCss with any existing node.rawStyle entries so only genuine unhandled styles are shown
   const rawCustom = useMemo(() => {
@@ -4032,12 +4032,21 @@ function OtherStylesSection({ node, patchStyle }) {
       setNewVal("");
       return;
     }
-    patchStyle({
-      customCss: {
-        ...rawCustom,
-        [p]: { value: v, enabled: true },
-      },
-    });
+    const nextCustom = {
+      ...(node.style?.customCss || {}),
+      ...rawCustom,
+      [p]: { value: v, enabled: true },
+    };
+    if (patchNode) {
+      patchNode(node.id, {
+        style: {
+          ...(node.style || {}),
+          customCss: nextCustom,
+        },
+      });
+    } else {
+      patchStyle({ customCss: nextCustom });
+    }
     setNewProp("");
     setNewVal("");
     setAddingRow(false);
@@ -4047,18 +4056,41 @@ function OtherStylesSection({ node, patchStyle }) {
     const curr = rawCustom[key];
     const val = typeof curr === "object" && curr !== null ? curr.value : curr;
     const isEnabled = typeof curr === "object" && curr !== null ? curr.enabled !== false : true;
-    patchStyle({
-      customCss: {
-        ...rawCustom,
-        [key]: { value: val, enabled: !isEnabled },
-      },
-    });
+    const nextCustom = {
+      ...(node.style?.customCss || {}),
+      ...rawCustom,
+      [key]: { value: val, enabled: !isEnabled },
+    };
+    if (patchNode) {
+      patchNode(node.id, {
+        style: {
+          ...(node.style || {}),
+          customCss: nextCustom,
+        },
+      });
+    } else {
+      patchStyle({ customCss: nextCustom });
+    }
   };
 
   const removeEntry = (key) => {
-    const next = { ...rawCustom };
-    delete next[key];
-    patchStyle({ customCss: Object.keys(next).length ? next : undefined });
+    const nextRaw = { ...(node.rawStyle || {}) };
+    delete nextRaw[key];
+    const nextCustom = { ...(node.style?.customCss || {}) };
+    delete nextCustom[key];
+
+    const patch = {
+      rawStyle: Object.keys(nextRaw).length ? nextRaw : undefined,
+      style: {
+        ...(node.style || {}),
+        customCss: Object.keys(nextCustom).length ? nextCustom : undefined,
+      },
+    };
+    if (patchNode) {
+      patchNode(node.id, patch);
+    } else {
+      patchStyle({ customCss: Object.keys(nextCustom).length ? nextCustom : undefined });
+    }
   };
 
   const entries = Object.entries(rawCustom);
@@ -4120,11 +4152,14 @@ function OtherStylesSection({ node, patchStyle }) {
 
                 <button
                   type="button"
-                  onClick={() => removeEntry(key)}
-                  className="opacity-0 group-hover:opacity-100 transition-opacity flex h-4 w-4 items-center justify-center rounded text-[var(--text-3)] hover:text-red-400 cursor-pointer shrink-0"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    removeEntry(key);
+                  }}
+                  className="opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity flex h-5 w-5 items-center justify-center rounded text-[var(--text-3)] hover:text-red-400 hover:bg-[var(--surface-hover)] cursor-pointer shrink-0"
                   title={`Remove ${key}`}
                 >
-                  <X size={11} />
+                  <X size={12} />
                 </button>
               </div>
             );
@@ -7736,7 +7771,7 @@ export default function Inspector() {
       )}
 
       {/* ------------------------------------------------ Other styles */}
-      <OtherStylesSection node={node} patchStyle={patchStyle} />
+      <OtherStylesSection node={node} patchStyle={patchStyle} patchNode={patchNode} />
 
       {/* ------------------------------------------------ Selection colors */}
       <SelectionColorsSection
