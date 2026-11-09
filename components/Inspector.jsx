@@ -867,6 +867,7 @@ function FillLayerItem({
   tokens,
   assets,
   addAsset,
+  fallbackUrl,
   onUpdate,
   onRemove,
   onToggleVisible,
@@ -874,6 +875,8 @@ function FillLayerItem({
   const [blendMenuOpen, setBlendMenuOpen] = useState(false);
   const imgFileRef = useRef(null);
   const [imgError, setImgError] = useState(null);
+  const [isUrlPromptOpen, setIsUrlPromptOpen] = useState(false);
+  const [urlInput, setUrlInput] = useState("");
   const [imgDims, setImgDims] = useState(() => ({
     w: fill.width || null,
     h: fill.height || null,
@@ -891,7 +894,7 @@ function FillLayerItem({
       setImgDims({ w: fill.width, h: fill.height });
       return;
     }
-    const url = assets?.[fill.assetId] || fill.url || fill.src;
+    const url = (fill.assetId && assets?.[fill.assetId]) || fill.url || fill.src || fallbackUrl;
     if (url) {
       const img = new Image();
       img.onload = () => {
@@ -899,7 +902,7 @@ function FillLayerItem({
       };
       img.src = url;
     }
-  }, [fill.assetId, fill.url, fill.src, fill.width, fill.height, assets]);
+  }, [fill.assetId, fill.url, fill.src, fallbackUrl, fill.width, fill.height, assets]);
 
   const onPickImage = async (e) => {
     const file = e.target.files?.[0];
@@ -923,6 +926,22 @@ function FillLayerItem({
     } catch (err) {
       setImgError(err.message);
     }
+  };
+
+  const handleUrlSubmit = () => {
+    const trimmed = urlInput.trim();
+    if (!trimmed) return;
+    const fileName = trimmed.split("/").pop().split("?")[0] || "image";
+    onUpdate({
+      ...fill,
+      kind: "image",
+      assetId: undefined,
+      url: trimmed,
+      fit: fill.fit ?? "cover",
+      fileName,
+    });
+    setUrlInput("");
+    setIsUrlPromptOpen(false);
   };
 
   const gradientStops =
@@ -1549,74 +1568,112 @@ function FillLayerItem({
 
       {/* Image Fill controls */}
       {fill.kind === "image" && (() => {
-        const imageUrl = (fill.assetId && assets?.[fill.assetId]) || fill.url || fill.src;
+        const imageUrl = (fill.assetId && assets?.[fill.assetId]) || fill.url || fill.src || fallbackUrl;
         return (
-          <div className="flex items-center justify-between gap-2 mt-1">
-            <div className="flex items-center min-w-0 flex-1">
-              {/* Thumbnail with hover edit overlay */}
-              <div
-                onClick={() => imgFileRef.current?.click()}
-                className="relative w-9 h-9 rounded-[var(--radius-sm)] border border-[var(--line)] overflow-hidden shrink-0 group/thumb cursor-pointer bg-[var(--surface-hover)] shadow-2xs"
-                title="Click to replace image"
-              >
-                {imageUrl ? (
-                  <div
-                    className="w-full h-full bg-cover bg-center"
-                    style={{
-                      backgroundImage: `url(${imageUrl})`,
-                    }}
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-[var(--text-2)]">
-                    <ImageIcon size={14} />
+          <div className="flex flex-col gap-1.5 mt-1">
+            {isUrlPromptOpen && (
+              <div className="flex items-center gap-1 mb-1">
+                <input
+                  type="text"
+                  placeholder="https://example.com/image.png"
+                  value={urlInput}
+                  onChange={(e) => setUrlInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") handleUrlSubmit();
+                    if (e.key === "Escape") setIsUrlPromptOpen(false);
+                  }}
+                  className="flex-1 h-6 rounded border border-[var(--line)] bg-[var(--surface-content)] px-1.5 text-xs text-[var(--text-1)] placeholder-[var(--text-2)] focus:outline-none focus:border-[var(--accent)]"
+                />
+                <button
+                  type="button"
+                  onClick={handleUrlSubmit}
+                  className="h-6 px-1.5 rounded bg-[var(--accent)] text-white text-xs font-medium hover:opacity-90 transition-opacity cursor-pointer"
+                >
+                  Apply
+                </button>
+              </div>
+            )}
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center min-w-0 flex-1">
+                {/* Thumbnail with hover edit overlay */}
+                <div
+                  onClick={() => imgFileRef.current?.click()}
+                  className="relative w-9 h-9 rounded-[var(--radius-sm)] border border-[var(--line)] overflow-hidden shrink-0 group/thumb cursor-pointer bg-[var(--surface-hover)] shadow-2xs"
+                  title="Click to replace image"
+                >
+                  {imageUrl ? (
+                    <div
+                      className="w-full h-full bg-cover bg-center"
+                      style={{
+                        backgroundImage: `url(${imageUrl})`,
+                      }}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-[var(--text-2)]">
+                      <ImageIcon size={14} />
+                    </div>
+                  )}
+                  {/* Hover Edit overlay */}
+                  <div className="absolute inset-0 bg-black/45 flex items-center justify-center opacity-0 group-hover/thumb:opacity-100 transition-opacity">
+                    <span className="text-[11px] font-medium text-white tracking-wide">Edit</span>
                   </div>
-                )}
-                {/* Hover Edit overlay */}
-                <div className="absolute inset-0 bg-black/45 flex items-center justify-center opacity-0 group-hover/thumb:opacity-100 transition-opacity">
-                  <span className="text-[11px] font-medium text-white tracking-wide">Edit</span>
+                </div>
+
+                {/* Filename & Dimensions */}
+                <div
+                  className="flex-1 min-w-0 flex flex-col justify-center ml-2.5 cursor-pointer"
+                  onClick={() => imgFileRef.current?.click()}
+                  title="Click to replace image"
+                >
+                  <span className="text-xs font-normal text-[var(--text-1)] truncate leading-tight hover:text-[var(--accent)] transition-colors">
+                    {fill.fileName || fill.name || (imageUrl ? imageUrl.split("/").pop().split("?")[0] : "Choose image…")}
+                  </span>
+                  <div className="flex items-center gap-1.5 mt-0.5">
+                    <span className="text-[11px] font-normal text-[#4f80ff] leading-tight">
+                      {imgDims.w && imgDims.h
+                        ? `${imgDims.w}×${imgDims.h}`
+                        : imageUrl
+                        ? "Image loaded"
+                        : "Upload image"}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIsUrlPromptOpen((v) => !v);
+                      }}
+                      className="text-[10px] text-[var(--text-2)] hover:text-[var(--text-1)] underline decoration-dotted transition-colors"
+                      title="Set by URL"
+                    >
+                      URL
+                    </button>
+                  </div>
                 </div>
               </div>
 
-              {/* Filename & Dimensions */}
-              <div
-                className="flex-1 min-w-0 flex flex-col justify-center ml-2.5 cursor-pointer"
-                onClick={() => imgFileRef.current?.click()}
-                title="Click to replace image"
-              >
-                <span className="text-xs font-normal text-[var(--text-1)] truncate leading-tight hover:text-[var(--accent)] transition-colors">
-                  {fill.fileName || fill.name || (imageUrl ? imageUrl.split("/").pop().split("?")[0] : "Choose image…")}
-                </span>
-                <span className="text-[11px] font-normal text-[#4f80ff] leading-tight mt-0.5">
-                  {imgDims.w && imgDims.h
-                    ? `${imgDims.w}×${imgDims.h}`
-                    : imageUrl
-                    ? "Image loaded"
-                    : "Upload image"}
-                </span>
+              {/* Right side: Dropdown for cover / contain / fill / tile */}
+              <div className="relative shrink-0">
+                <select
+                  value={fill.fit ?? "cover"}
+                  onChange={(e) => onUpdate({ ...fill, fit: e.target.value })}
+                  className="h-[var(--row-field-h)] appearance-none rounded-[var(--radius-md)] border border-[var(--line)] bg-[var(--surface-content)] pl-2 pr-6 text-xs font-medium text-[var(--text-1)] hover:border-[var(--text-2)] focus:border-[var(--accent)] focus:outline-none cursor-pointer transition-colors"
+                >
+                  <option value="cover">Cover</option>
+                  <option value="contain">Contain</option>
+                  <option value="fill">Fill</option>
+                  <option value="tile">Tile</option>
+                </select>
+                <svg
+                  width="8"
+                  height="6"
+                  viewBox="0 0 8 6"
+                  fill="none"
+                  stroke="currentColor"
+                  className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-[var(--text-2)]"
+                >
+                  <path d="M0.75 1.5L4 4.75L7.25 1.5" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </div>
-            </div>
-
-            {/* Right side: Dropdown for cover / contain / fill without label */}
-            <div className="relative shrink-0">
-              <select
-                value={fill.fit ?? "cover"}
-                onChange={(e) => onUpdate({ ...fill, fit: e.target.value })}
-                className="h-[var(--row-field-h)] appearance-none rounded-[var(--radius-md)] border border-[var(--line)] bg-[var(--surface-content)] pl-2.5 pr-6 text-xs font-medium text-[var(--text-1)] hover:border-[var(--text-2)] focus:border-[var(--accent)] focus:outline-none cursor-pointer transition-colors"
-              >
-                <option value="cover">Cover</option>
-                <option value="contain">Contain</option>
-                <option value="fill">Fill</option>
-              </select>
-              <svg
-                width="8"
-                height="6"
-                viewBox="0 0 8 6"
-                fill="none"
-                stroke="currentColor"
-                className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-[var(--text-2)]"
-              >
-                <path d="M0.75 1.5L4 4.75L7.25 1.5" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
             </div>
           </div>
         );
@@ -1898,6 +1955,19 @@ function FillSection({ node, tokens, patchStyle, patchNode }) {
       blendMode: "normal",
     };
     fills = [defaultImgFill, ...fills];
+  } else if (isImageNode && (nodeImgUrl || nodeImgAssetId)) {
+    // If an existing image fill lacks a url/assetId, backfill it from the image node
+    fills = fills.map((f) => {
+      if (f && f.kind === "image" && !f.url && !f.assetId) {
+        return {
+          ...f,
+          url: nodeImgUrl || "",
+          assetId: nodeImgAssetId || undefined,
+          fileName: f.fileName || (node.name && node.name !== "Image" ? node.name : (nodeImgUrl ? nodeImgUrl.split("/").pop().split("?")[0] : "image")),
+        };
+      }
+      return f;
+    });
   }
 
   const handleAddFill = () => {
@@ -2013,6 +2083,7 @@ function FillSection({ node, tokens, patchStyle, patchNode }) {
               tokens={tokens}
               assets={assets}
               addAsset={addAsset}
+              fallbackUrl={isImageNode ? nodeImgUrl : undefined}
               onUpdate={(updated) => handleUpdateFill(idx, updated)}
               onRemove={() => handleRemoveFill(idx)}
               onToggleVisible={() => handleToggleVisible(idx)}
