@@ -3225,11 +3225,17 @@ export default function Viewport() {
             const tf = finalDoc.nodes[targetFrameId];
             const isTargetAutoLayout = tf?.layout?.mode === "flex" || tf?.layout?.mode === "grid";
             const isAbs = !isTargetAutoLayout && !!node.position?.absolute;
+            const padL = !isTargetAutoLayout
+              ? (Number(tf.layout?.padding?.l ?? tf.layout?.padding?.h ?? tf.padding?.l ?? 0) || 0)
+              : 0;
+            const padT = !isTargetAutoLayout
+              ? (Number(tf.layout?.padding?.t ?? tf.layout?.padding?.v ?? tf.padding?.t ?? 0) || 0)
+              : 0;
             const newPos = isTargetAutoLayout
               ? { x: 0, y: 0, absolute: false }
               : {
-                  x: Math.round(nRect.x - tfRect.x),
-                  y: Math.round(nRect.y - tfRect.y),
+                  x: Math.round(nRect.x - tfRect.x - padL),
+                  y: Math.round(nRect.y - tfRect.y - padT),
                   ...(isAbs ? { absolute: true } : {}),
                 };
             reparents.push({ id, newParentId: targetFrameId, newPosition: newPos, nRect });

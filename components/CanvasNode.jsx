@@ -1443,8 +1443,10 @@ export default function CanvasNode({
   let freeformFitW = null;
   let freeformFitH = null;
   if (isContainer && hasVisibleChildren && !isFlex) {
-    const padR = resolveNumeric(node.layout?.padding?.r ?? node.layout?.padding?.h ?? 0, tokens);
-    const padB = resolveNumeric(node.layout?.padding?.b ?? node.layout?.padding?.v ?? 0, tokens);
+    const padL = resolveNumeric(node.layout?.padding?.l ?? node.layout?.padding?.h ?? node.padding?.l ?? 0, tokens) || 0;
+    const padR = resolveNumeric(node.layout?.padding?.r ?? node.layout?.padding?.h ?? node.padding?.r ?? 0, tokens) || 0;
+    const padT = resolveNumeric(node.layout?.padding?.t ?? node.layout?.padding?.v ?? node.padding?.t ?? 0, tokens) || 0;
+    const padB = resolveNumeric(node.layout?.padding?.b ?? node.layout?.padding?.v ?? node.padding?.b ?? 0, tokens) || 0;
     let maxR = 0;
     let maxB = 0;
     for (const c of visibleChildren) {
@@ -1465,8 +1467,8 @@ export default function CanvasNode({
       maxR = Math.max(maxR, cx + cw);
       maxB = Math.max(maxB, cy + ch);
     }
-    if (maxR > 0) freeformFitW = maxR + padR;
-    if (maxB > 0) freeformFitH = maxB + padB;
+    if (maxR > 0) freeformFitW = maxR + padL + padR;
+    if (maxB > 0) freeformFitH = maxB + padT + padB;
   }
 
   if (flexCtx) {
@@ -1648,9 +1650,9 @@ export default function CanvasNode({
     ...styleProps(node, tokens),
     userSelect: "none",
     boxSizing: "border-box",
+    pointerEvents: node.locked ? "none" : "auto",
     ...(node.clipContent || node.style?.overflow === "hidden" ? { overflow: "hidden" } : {}),
     ...(node.hidden || node.style?.opacity === 0 ? { display: "none" } : {}),
-    ...(node.locked ? { pointerEvents: "none" } : {}),
   };
   // Canvas elements must never display internal scrollbars
   if (common.overflow === "scroll" || common.overflow === "auto") delete common.overflow;
@@ -2071,17 +2073,40 @@ export default function CanvasNode({
           ...(isNodeHidden ? { display: "none" } : {}),
         }}
       >
-        {children.map((child, idx) => (
-          <CanvasNode
-            key={child.id}
-            node={child}
-            nodes={nodes}
-            tokens={tokens}
-            assets={assets}
-            flexCtx={childCtx.get(child.id) ?? null}
-            zIndexOverride={idx + 1}
-          />
-        ))}
+        {!isFlex && !isGrid ? (
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              height: "100%",
+              pointerEvents: "none",
+            }}
+          >
+            {children.map((child, idx) => (
+              <CanvasNode
+                key={child.id}
+                node={child}
+                nodes={nodes}
+                tokens={tokens}
+                assets={assets}
+                flexCtx={null}
+                zIndexOverride={children.length - idx}
+              />
+            ))}
+          </div>
+        ) : (
+          children.map((child, idx) => (
+            <CanvasNode
+              key={child.id}
+              node={child}
+              nodes={nodes}
+              tokens={tokens}
+              assets={assets}
+              flexCtx={childCtx.get(child.id) ?? null}
+              zIndexOverride={children.length - idx}
+            />
+          ))
+        )}
         {node.type === "frame" && <GuideOverlays node={node} />}
       </div>
     );
