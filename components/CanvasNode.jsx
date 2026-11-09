@@ -1580,12 +1580,12 @@ export default function CanvasNode({
           box.top = nodePos.y;
         }
       } else {
-        box.left = (nodeSize.w?.kind === "fill" && node.parentId) ? 0 : nodePos.x;
-        box.top = (nodeSize.h?.kind === "fill" && node.parentId) ? 0 : nodePos.y;
+        box.left = nodePos.x;
+        box.top = nodePos.y;
       }
     } else {
-      box.left = (nodeSize.w?.kind === "fill" && node.parentId) ? 0 : nodePos.x;
-      box.top = (nodeSize.h?.kind === "fill" && node.parentId) ? 0 : nodePos.y;
+      box.left = nodePos.x;
+      box.top = nodePos.y;
     }
     if (isContainer && (nodeSize.w?.kind === "fit" || nodeSize.w?.kind === "auto")) {
       if (hasVisibleChildren) {
@@ -1848,16 +1848,12 @@ export default function CanvasNode({
     const markup = node.svgOuterHtml || node.svgMarkup || node.rawSvg;
     const svgColor = node.color || node.style?.color || "currentColor";
     const svgFill = node.fill || node.style?.fill || "currentColor";
-    const isFillW = nodeSize.w?.kind === "fill" || node.wMode === "Fill";
-    const isFillH = nodeSize.h?.kind === "fill" || node.hMode === "Fill";
 
     body = (
       <div
         data-node-id={node.id}
         style={{
           ...common,
-          ...(isFillW && node.parentId ? { left: 0, width: "100%" } : {}),
-          ...(isFillH && node.parentId ? { top: 0, height: "100%" } : {}),
           border: "none",        // SVG nodes must never show CSS borders
           outline: "none",
           color: svgColor,
