@@ -139,16 +139,16 @@ test("text collapse: one node per all-text subtree, whitespace collapsed", () =>
   assert.equal(pre.roots[0].text.content, "a  b\n c");
 });
 
-test("absolute elements re-parent to the nearest containing block", () => {
+test("absolute elements keep their direct DOM parent hierarchy with absolute positioning", () => {
   const res = convertHtml(
     '<div style="position: relative; width: 200px; height: 200px">' +
-      '<div><span style="position: absolute; left: 10px; top: 20px; width: 30px; height: 40px"></span></div>' +
+      '<div id="direct-parent"><span style="position: absolute; left: 10px; top: 20px; width: 30px; height: 40px"></span></div>' +
       "</div>",
   );
-  const outer = res.roots[0];
+  const directParent = res.all.find((n) => n.id !== res.roots[0].id && n.childIds?.length > 0);
   const abs = res.all.find((n) => n.absolutePosition);
   assert.ok(abs);
-  assert.equal(abs.parentId, outer.id);
+  assert.equal(abs.parentId, directParent.id);
   assert.equal(abs.x, 10);
   assert.equal(abs.y, 20);
   const fixed = convertHtml('<div style="width: 100px; height: 100px"><div style="position: fixed; top: 0px; left: 0px; width: 10px; height: 10px"></div></div>');
@@ -164,11 +164,11 @@ test("flex gap recovery from uniform child margins", () => {
   assert.equal(res.roots[0].flex.gap.value, 12);
 });
 
-test("z-index becomes sibling order, then is dropped", () => {
+test("DOM child order is preserved; z-index is kept in rawStyle without corrupting DOM order", () => {
   const kid = (z, w) => `<div style="z-index: ${z}; width: ${w}px; height: 10px"></div>`;
   const res = convertHtml(`<div style="width: 100px; height: 100px">${kid(3, 30)}${kid(1, 10)}${kid(2, 20)}</div>`);
   const widths = res.roots[0].childIds.map((id) => res.byId.get(id).w);
-  assert.deepEqual(widths, [10, 20, 30]);
+  assert.deepEqual(widths, [30, 10, 20]);
 });
 
 test("grid containers flatten: children placed by the template", () => {

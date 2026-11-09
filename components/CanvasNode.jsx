@@ -228,6 +228,9 @@ export function getRawStyleProps(node) {
   // apply them as camelCase / custom CSS properties safely
   for (const [prop, val] of Object.entries(merged)) {
     if (val == null || val === "") continue;
+    // Borders are managed by node.borders via styleProps; ignore orphan border properties in raw styles
+    const isBorderProp = (prop.startsWith("border") || prop.startsWith("-webkit-border")) && !prop.includes("radius");
+    if (isBorderProp) continue;
     const targetProp = RAW_STYLE_ALLOWLIST[prop] || toReactStyleKey(prop);
     if (targetProp && !out[targetProp]) {
       out[targetProp] = val;
