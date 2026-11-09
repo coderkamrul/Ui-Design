@@ -473,7 +473,8 @@ export default function ConnectAgentModal({ onClose }) {
                   type="button"
                   onClick={async () => {
                     try {
-                      const res = await fetch("/api/mcp?instructions=true");
+                      const endpoint = origin ? `${origin}/api/mcp?instructions=true` : "/api/mcp?instructions=true";
+                      const res = await fetch(endpoint);
                       const txt = await res.text();
                       await navigator.clipboard.writeText(txt);
                       setInstructionsCopied(true);
