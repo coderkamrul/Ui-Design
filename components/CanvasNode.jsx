@@ -231,6 +231,9 @@ export function getRawStyleProps(node) {
     // Borders are managed by node.borders via styleProps; ignore orphan border properties in raw styles
     const isBorderProp = (prop.startsWith("border") || prop.startsWith("-webkit-border")) && !prop.includes("radius");
     if (isBorderProp) continue;
+    // Padding is managed by node.layout.padding / node.padding; ignore raw padding properties on containers
+    const isPaddingProp = prop.startsWith("padding") || prop.startsWith("-webkit-padding");
+    if (isPaddingProp && (node.layout?.padding != null || node.padding != null || node.type === "frame")) continue;
     const targetProp = RAW_STYLE_ALLOWLIST[prop] || toReactStyleKey(prop);
     if (targetProp && !out[targetProp]) {
       out[targetProp] = val;
@@ -367,13 +370,11 @@ function styleProps(node, tokens) {
   // Padding (from layout.padding or padding)
   const paddingLayout = node.layout?.padding ?? node.padding;
   if (paddingLayout) {
-    const padTop = resolveNumeric(paddingLayout.t ?? paddingLayout.v ?? 0, tokens);
-    const padRight = resolveNumeric(paddingLayout.r ?? paddingLayout.h ?? 0, tokens);
-    const padBottom = resolveNumeric(paddingLayout.b ?? paddingLayout.v ?? 0, tokens);
-    const padLeft = resolveNumeric(paddingLayout.l ?? paddingLayout.h ?? 0, tokens);
-    if (padTop || padRight || padBottom || padLeft) {
-      out.padding = `${padTop}px ${padRight}px ${padBottom}px ${padLeft}px`;
-    }
+    const padTop = Math.max(0, resolveNumeric(paddingLayout.t ?? paddingLayout.v ?? 0, tokens) || 0);
+    const padRight = Math.max(0, resolveNumeric(paddingLayout.r ?? paddingLayout.h ?? 0, tokens) || 0);
+    const padBottom = Math.max(0, resolveNumeric(paddingLayout.b ?? paddingLayout.v ?? 0, tokens) || 0);
+    const padLeft = Math.max(0, resolveNumeric(paddingLayout.l ?? paddingLayout.h ?? 0, tokens) || 0);
+    out.padding = `${padTop}px ${padRight}px ${padBottom}px ${padLeft}px`;
   }
 
   // Custom CSS (Other styles section)
@@ -402,7 +403,17 @@ function styleProps(node, tokens) {
     }
     delete rawProps.transform;
   }
+  const explicitPadding = out.padding;
   Object.assign(out, rawProps);
+  if (explicitPadding !== undefined) {
+    out.padding = explicitPadding;
+    delete out.paddingLeft;
+    delete out.paddingRight;
+    delete out.paddingTop;
+    delete out.paddingBottom;
+    delete out.paddingInline;
+    delete out.paddingBlock;
+  }
   if (out.overflow === "scroll" || out.overflow === "auto") delete out.overflow;
   if (out.overflowX === "scroll" || out.overflowX === "auto") delete out.overflowX;
   if (out.overflowY === "scroll" || out.overflowY === "auto") delete out.overflowY;
@@ -2054,9 +2065,9 @@ export default function CanvasNode({
         data-node-id={node.id}
         style={{
           ...common,
+          ...getRawStyleProps(node),
           ...fillProps(node, tokens, assets),
           ...containerProps,
-          ...getRawStyleProps(node),
           ...(isNodeHidden ? { display: "none" } : {}),
         }}
       >
