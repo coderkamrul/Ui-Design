@@ -64979,8 +64979,10 @@
         "stroke": {
           "width": 1.5,
           "paint": {
-            "kind": "solid",
-            "color": "#1F1F1F",
+            "kind": "token",
+            "tokenId": "tok-7",
+            "tokenName": "color/text/primary",
+            "color": "#FFFFFF",
             "alpha": 1
           }
         },
@@ -66810,6 +66812,5193 @@
         "align": "left",
         "fontFamily": "Orbitron"
       }
+    },
+    "node-248": {
+      "id": "node-248",
+      "type": "frame",
+      "name": "About Page Canvas",
+      "parentId": null,
+      "childIds": [
+        "node-249",
+        "node-264",
+        "node-269",
+        "node-283",
+        "node-330",
+        "node-348",
+        "node-357"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 64,
+        "padding": {
+          "l": 0,
+          "r": 0,
+          "t": 0,
+          "b": 64,
+          "h": 0,
+          "v": 32
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1440
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#0A0A0C"
+        },
+        "radius": 0,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#0A0A0C"
+          }
+        ],
+        "overflow": "hidden"
+      },
+      "clipContent": true
+    },
+    "node-249": {
+      "id": "node-249",
+      "type": "frame",
+      "name": "Navbar",
+      "parentId": "node-248",
+      "childIds": [
+        "node-250",
+        "node-253",
+        "node-259"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 64,
+          "r": 64,
+          "t": 20,
+          "b": 20,
+          "h": 64,
+          "v": 20
+        },
+        "alignMain": "space-between",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 80
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#0F0F0F"
+        },
+        "radius": 0,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.08)",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#0F0F0F"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-250": {
+      "id": "node-250",
+      "type": "frame",
+      "name": "Logo Brand",
+      "parentId": "node-249",
+      "childIds": [
+        "node-251",
+        "node-252"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 8,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-251": {
+      "id": "node-251",
+      "type": "text",
+      "name": "Logo Text",
+      "parentId": "node-250",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "KES'S AUTO DETAILING",
+        "fontSize": 18,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-252": {
+      "id": "node-252",
+      "type": "frame",
+      "name": "Red Dot",
+      "parentId": "node-250",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 8
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 8
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#E60000"
+        },
+        "radius": 9999,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#E60000"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-253": {
+      "id": "node-253",
+      "type": "frame",
+      "name": "Nav Links",
+      "parentId": "node-249",
+      "childIds": [
+        "node-254",
+        "node-255",
+        "node-256",
+        "node-257",
+        "node-258"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 32,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-254": {
+      "id": "node-254",
+      "type": "text",
+      "name": "Link Home",
+      "parentId": "node-253",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "Home",
+        "fontSize": 15,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-255": {
+      "id": "node-255",
+      "type": "text",
+      "name": "Link About (Active)",
+      "parentId": "node-253",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FF1E27"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FF1E27"
+          }
+        ]
+      },
+      "text": {
+        "content": "About",
+        "fontSize": 15,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-256": {
+      "id": "node-256",
+      "type": "text",
+      "name": "Link Services",
+      "parentId": "node-253",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "Services",
+        "fontSize": 15,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-257": {
+      "id": "node-257",
+      "type": "text",
+      "name": "Link Pricing",
+      "parentId": "node-253",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "Pricing",
+        "fontSize": 15,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-258": {
+      "id": "node-258",
+      "type": "text",
+      "name": "Link Contact",
+      "parentId": "node-253",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "Contact",
+        "fontSize": 15,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-259": {
+      "id": "node-259",
+      "type": "frame",
+      "name": "Nav CTA",
+      "parentId": "node-249",
+      "childIds": [
+        "node-260",
+        "node-261"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 12,
+        "padding": {
+          "l": 20,
+          "r": 4,
+          "t": 4,
+          "b": 4,
+          "h": 12,
+          "v": 4
+        },
+        "alignMain": "start",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 44
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "radius": 9999,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-260": {
+      "id": "node-260",
+      "type": "text",
+      "name": "Btn Text",
+      "parentId": "node-259",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#111827"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#111827"
+          }
+        ]
+      },
+      "text": {
+        "content": "Book Now",
+        "fontSize": 14,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-261": {
+      "id": "node-261",
+      "type": "frame",
+      "name": "Icon Badge",
+      "parentId": "node-259",
+      "childIds": [
+        "node-262"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 34
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 34
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#111827"
+        },
+        "radius": 9999,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#111827"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-262": {
+      "id": "node-262",
+      "type": "svg",
+      "name": "Arrow SVG",
+      "parentId": "node-261",
+      "childIds": [
+        "node-263"
+      ],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 18
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 18
+        }
+      },
+      "style": {},
+      "viewBox": "0 0 24 24"
+    },
+    "node-263": {
+      "id": "node-263",
+      "type": "path",
+      "name": "Arrow Path",
+      "parentId": "node-262",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 160
+        }
+      },
+      "style": {
+        "stroke": {
+          "width": 1.5,
+          "paint": {
+            "kind": "solid",
+            "color": "#1F1F1F",
+            "alpha": 1
+          }
+        },
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "path": {
+        "anchors": [],
+        "closed": false
+      },
+      "d": "M18.75 6V15.75C18.75 15.9489 18.671 16.1397 18.5303 16.2803C18.3897 16.421 18.1989 16.5 18 16.5C17.8011 16.5 17.6103 16.421 17.4697 16.2803C17.329 16.1397 17.25 15.9489 17.25 15.75V7.81031L6.53061 18.5306C6.38988 18.6714 6.19901 18.7504 5.99999 18.7504C5.80097 18.7504 5.6101 18.6714 5.46936 18.5306C5.32863 18.3899 5.24957 18.199 5.24957 18C5.24957 17.801 5.32863 17.6101 5.46936 17.4694L16.1897 6.75H8.24999C8.05108 6.75 7.86031 6.67098 7.71966 6.53033C7.57901 6.38968 7.49999 6.19891 7.49999 6C7.49999 5.80109 7.57901 5.61032 7.71966 5.46967C7.86031 5.32902 8.05108 5.25 8.24999 5.25H18C18.1989 5.25 18.3897 5.32902 18.5303 5.46967C18.671 5.61032 18.75 5.80109 18.75 6Z"
+    },
+    "node-264": {
+      "id": "node-264",
+      "type": "frame",
+      "name": "About Hero Section",
+      "parentId": "node-248",
+      "childIds": [
+        "node-265",
+        "node-267",
+        "node-268"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 24,
+        "padding": {
+          "l": 64,
+          "r": 64,
+          "t": 32,
+          "b": 16,
+          "h": 64,
+          "v": 24
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-265": {
+      "id": "node-265",
+      "type": "frame",
+      "name": "Eyebrow Badge",
+      "parentId": "node-264",
+      "childIds": [
+        "node-266"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 16,
+          "r": 16,
+          "t": 6,
+          "b": 6,
+          "h": 16,
+          "v": 6
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "rgba(230, 0, 0, 0.15)"
+        },
+        "radius": 9999,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "rgba(230, 0, 0, 0.5)",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "rgba(230, 0, 0, 0.15)"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-266": {
+      "id": "node-266",
+      "type": "text",
+      "name": "Badge Text",
+      "parentId": "node-265",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FF1E27"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FF1E27"
+          }
+        ]
+      },
+      "text": {
+        "content": "ABOUT KES'S AUTO DETAILING • RICHMOND, CA",
+        "fontSize": 12,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-267": {
+      "id": "node-267",
+      "type": "text",
+      "name": "Headline",
+      "parentId": "node-264",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1000
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "Precision Detailing Rooted in 20 Years of Passion",
+        "fontSize": 52,
+        "fontWeight": 700,
+        "lineHeight": 1.15,
+        "letterSpacing": 0,
+        "align": "center",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-268": {
+      "id": "node-268",
+      "type": "text",
+      "name": "Hero Subtitle",
+      "parentId": "node-264",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 820
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "From daily drivers to luxury exotics, Kes's Auto Detailing delivers master-crafted hand washing, multi-stage paint correction, and interior restoration. We don't just clean cars — we protect your investment with passion and pride.",
+        "fontSize": 18,
+        "fontWeight": 400,
+        "lineHeight": 1.6,
+        "letterSpacing": 0,
+        "align": "center",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-269": {
+      "id": "node-269",
+      "type": "frame",
+      "name": "Milestones Container",
+      "parentId": "node-248",
+      "childIds": [
+        "node-270"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 64,
+          "r": 64,
+          "t": 0,
+          "b": 0,
+          "h": 64,
+          "v": 0
+        },
+        "alignMain": "center",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-270": {
+      "id": "node-270",
+      "type": "frame",
+      "name": "Milestones Card",
+      "parentId": "node-269",
+      "childIds": [
+        "node-271",
+        "node-274",
+        "node-277",
+        "node-280"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 48,
+          "r": 48,
+          "t": 32,
+          "b": 32,
+          "h": 48,
+          "v": 32
+        },
+        "alignMain": "space-between",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1312
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#141416"
+        },
+        "radius": 20,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.1)",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#141416"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-271": {
+      "id": "node-271",
+      "type": "frame",
+      "name": "Stat 1",
+      "parentId": "node-270",
+      "childIds": [
+        "node-272",
+        "node-273"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 4,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 260
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-272": {
+      "id": "node-272",
+      "type": "text",
+      "name": "Num",
+      "parentId": "node-271",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#E60000"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#E60000"
+          }
+        ]
+      },
+      "text": {
+        "content": "20+",
+        "fontSize": 40,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-273": {
+      "id": "node-273",
+      "type": "text",
+      "name": "Label",
+      "parentId": "node-271",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "Years of Master Detailing Experience",
+        "fontSize": 14,
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-274": {
+      "id": "node-274",
+      "type": "frame",
+      "name": "Stat 2",
+      "parentId": "node-270",
+      "childIds": [
+        "node-275",
+        "node-276"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 4,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 260
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-275": {
+      "id": "node-275",
+      "type": "text",
+      "name": "Num",
+      "parentId": "node-274",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "5,000+",
+        "fontSize": 40,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-276": {
+      "id": "node-276",
+      "type": "text",
+      "name": "Label",
+      "parentId": "node-274",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "Satisfied Bay Area Clients",
+        "fontSize": 14,
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-277": {
+      "id": "node-277",
+      "type": "frame",
+      "name": "Stat 3",
+      "parentId": "node-270",
+      "childIds": [
+        "node-278",
+        "node-279"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 4,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 260
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-278": {
+      "id": "node-278",
+      "type": "text",
+      "name": "Num",
+      "parentId": "node-277",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "100%",
+        "fontSize": 40,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-279": {
+      "id": "node-279",
+      "type": "text",
+      "name": "Label",
+      "parentId": "node-277",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "Scratch-Safe Hand Wash Guarantee",
+        "fontSize": 14,
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-280": {
+      "id": "node-280",
+      "type": "frame",
+      "name": "Stat 4",
+      "parentId": "node-270",
+      "childIds": [
+        "node-281",
+        "node-282"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 4,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 260
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-281": {
+      "id": "node-281",
+      "type": "text",
+      "name": "Num",
+      "parentId": "node-280",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FF1E27"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FF1E27"
+          }
+        ]
+      },
+      "text": {
+        "content": "4.9 ★",
+        "fontSize": 40,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-282": {
+      "id": "node-282",
+      "type": "text",
+      "name": "Label",
+      "parentId": "node-280",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "Top Customer Rating in Richmond",
+        "fontSize": 14,
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-283": {
+      "id": "node-283",
+      "type": "frame",
+      "name": "Story Section",
+      "parentId": "node-248",
+      "childIds": [
+        "node-284"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 64,
+          "r": 64,
+          "t": 0,
+          "b": 0,
+          "h": 64,
+          "v": 0
+        },
+        "alignMain": "center",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-284": {
+      "id": "node-284",
+      "type": "frame",
+      "name": "Story Row",
+      "parentId": "node-283",
+      "childIds": [
+        "node-285",
+        "node-315"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 32,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1312
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-285": {
+      "id": "node-285",
+      "type": "frame",
+      "name": "Kes Story Card",
+      "parentId": "node-284",
+      "childIds": [
+        "node-286",
+        "node-287",
+        "node-288",
+        "node-289",
+        "node-290"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 20,
+        "padding": {
+          "l": 40,
+          "r": 40,
+          "t": 40,
+          "b": 40,
+          "h": 40,
+          "v": 40
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 640
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#18181B"
+        },
+        "radius": 24,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.1)",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#18181B"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-286": {
+      "id": "node-286",
+      "type": "text",
+      "name": "Eyebrow",
+      "parentId": "node-285",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#E60000"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#E60000"
+          }
+        ]
+      },
+      "text": {
+        "content": "OUR PHILOSOPHY & HERITAGE",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-287": {
+      "id": "node-287",
+      "type": "text",
+      "name": "Heading",
+      "parentId": "node-285",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "We treat your car as if it was our own masterpiece.",
+        "fontSize": 26,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-288": {
+      "id": "node-288",
+      "type": "text",
+      "name": "Paragraph 1",
+      "parentId": "node-285",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "Founded by passionate detailing specialists with over 20 years of hands-on experience, Kes's Auto Detailing was born out of frustration with commercial scratch-prone car washes. We believe detailing is an art that demands time, precision lighting, and unmatched dedication.",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "lineHeight": 1.6,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-289": {
+      "id": "node-289",
+      "type": "text",
+      "name": "Paragraph 2",
+      "parentId": "node-285",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "From daily commuter vehicles needing high-durability protection to collectible classics requiring multi-stage rotary polishing, our shop is built around customer satisfaction and immaculate results.",
+        "fontSize": 16,
+        "fontWeight": 400,
+        "lineHeight": 1.6,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-290": {
+      "id": "node-290",
+      "type": "frame",
+      "name": "Checklist",
+      "parentId": "node-285",
+      "childIds": [
+        "node-291",
+        "node-297",
+        "node-303",
+        "node-309"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 14,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-291": {
+      "id": "node-291",
+      "type": "frame",
+      "name": "Checklist Item - 100% scratch-free two-bucket hand wash method",
+      "parentId": "node-290",
+      "childIds": [
+        "node-292",
+        "node-296"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 12,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-292": {
+      "id": "node-292",
+      "type": "frame",
+      "name": "Icon Wrapper",
+      "parentId": "node-291",
+      "childIds": [
+        "node-293"
+      ],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 22
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 22
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-293": {
+      "id": "node-293",
+      "type": "svg",
+      "name": "Checkmark SVG",
+      "parentId": "node-292",
+      "childIds": [
+        "node-294",
+        "node-295"
+      ],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 22
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 22
+        }
+      },
+      "style": {},
+      "viewBox": "0 0 24 24"
+    },
+    "node-294": {
+      "id": "node-294",
+      "type": "path",
+      "name": "Ring",
+      "parentId": "node-293",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 160
+        }
+      },
+      "style": {
+        "stroke": {
+          "width": 2,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#E60000",
+            "alpha": 0.25
+          }
+        }
+      },
+      "path": {
+        "anchors": [],
+        "closed": false
+      },
+      "d": "M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+    },
+    "node-295": {
+      "id": "node-295",
+      "type": "path",
+      "name": "Tick",
+      "parentId": "node-293",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 160
+        }
+      },
+      "style": {
+        "stroke": {
+          "width": 2,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#E60000",
+            "alpha": 1
+          }
+        }
+      },
+      "path": {
+        "anchors": [],
+        "closed": false
+      },
+      "d": "M8.25 12.75L10.5 15L15.75 9.75"
+    },
+    "node-296": {
+      "id": "node-296",
+      "type": "text",
+      "name": "Text",
+      "parentId": "node-291",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#D4D4D8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#D4D4D8"
+          }
+        ]
+      },
+      "text": {
+        "content": "100% scratch-free two-bucket hand wash method",
+        "fontSize": 15,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-297": {
+      "id": "node-297",
+      "type": "frame",
+      "name": "Checklist Item - Deionized pure water filtration (zero water spots)",
+      "parentId": "node-290",
+      "childIds": [
+        "node-298",
+        "node-302"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 12,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-298": {
+      "id": "node-298",
+      "type": "frame",
+      "name": "Icon Wrapper",
+      "parentId": "node-297",
+      "childIds": [
+        "node-299"
+      ],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 22
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 22
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-299": {
+      "id": "node-299",
+      "type": "svg",
+      "name": "Checkmark SVG",
+      "parentId": "node-298",
+      "childIds": [
+        "node-300",
+        "node-301"
+      ],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 22
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 22
+        }
+      },
+      "style": {},
+      "viewBox": "0 0 24 24"
+    },
+    "node-300": {
+      "id": "node-300",
+      "type": "path",
+      "name": "Ring",
+      "parentId": "node-299",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 160
+        }
+      },
+      "style": {
+        "stroke": {
+          "width": 2,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#E60000",
+            "alpha": 0.25
+          }
+        }
+      },
+      "path": {
+        "anchors": [],
+        "closed": false
+      },
+      "d": "M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+    },
+    "node-301": {
+      "id": "node-301",
+      "type": "path",
+      "name": "Tick",
+      "parentId": "node-299",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 160
+        }
+      },
+      "style": {
+        "stroke": {
+          "width": 2,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#E60000",
+            "alpha": 1
+          }
+        }
+      },
+      "path": {
+        "anchors": [],
+        "closed": false
+      },
+      "d": "M8.25 12.75L10.5 15L15.75 9.75"
+    },
+    "node-302": {
+      "id": "node-302",
+      "type": "text",
+      "name": "Text",
+      "parentId": "node-297",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#D4D4D8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#D4D4D8"
+          }
+        ]
+      },
+      "text": {
+        "content": "Deionized pure water filtration (zero water spots)",
+        "fontSize": 15,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-303": {
+      "id": "node-303",
+      "type": "frame",
+      "name": "Checklist Item - High-temp steam sanitization for all fabrics and leathers",
+      "parentId": "node-290",
+      "childIds": [
+        "node-304",
+        "node-308"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 12,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-304": {
+      "id": "node-304",
+      "type": "frame",
+      "name": "Icon Wrapper",
+      "parentId": "node-303",
+      "childIds": [
+        "node-305"
+      ],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 22
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 22
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-305": {
+      "id": "node-305",
+      "type": "svg",
+      "name": "Checkmark SVG",
+      "parentId": "node-304",
+      "childIds": [
+        "node-306",
+        "node-307"
+      ],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 22
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 22
+        }
+      },
+      "style": {},
+      "viewBox": "0 0 24 24"
+    },
+    "node-306": {
+      "id": "node-306",
+      "type": "path",
+      "name": "Ring",
+      "parentId": "node-305",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 160
+        }
+      },
+      "style": {
+        "stroke": {
+          "width": 2,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#E60000",
+            "alpha": 0.25
+          }
+        }
+      },
+      "path": {
+        "anchors": [],
+        "closed": false
+      },
+      "d": "M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+    },
+    "node-307": {
+      "id": "node-307",
+      "type": "path",
+      "name": "Tick",
+      "parentId": "node-305",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 160
+        }
+      },
+      "style": {
+        "stroke": {
+          "width": 2,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#E60000",
+            "alpha": 1
+          }
+        }
+      },
+      "path": {
+        "anchors": [],
+        "closed": false
+      },
+      "d": "M8.25 12.75L10.5 15L15.75 9.75"
+    },
+    "node-308": {
+      "id": "node-308",
+      "type": "text",
+      "name": "Text",
+      "parentId": "node-303",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#D4D4D8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#D4D4D8"
+          }
+        ]
+      },
+      "text": {
+        "content": "High-temp steam sanitization for all fabrics and leathers",
+        "fontSize": 15,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-309": {
+      "id": "node-309",
+      "type": "frame",
+      "name": "Checklist Item - Ceramic paint protection and headlight UV restoration",
+      "parentId": "node-290",
+      "childIds": [
+        "node-310",
+        "node-314"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 12,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-310": {
+      "id": "node-310",
+      "type": "frame",
+      "name": "Icon Wrapper",
+      "parentId": "node-309",
+      "childIds": [
+        "node-311"
+      ],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 22
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 22
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-311": {
+      "id": "node-311",
+      "type": "svg",
+      "name": "Checkmark SVG",
+      "parentId": "node-310",
+      "childIds": [
+        "node-312",
+        "node-313"
+      ],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 22
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 22
+        }
+      },
+      "style": {},
+      "viewBox": "0 0 24 24"
+    },
+    "node-312": {
+      "id": "node-312",
+      "type": "path",
+      "name": "Ring",
+      "parentId": "node-311",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 160
+        }
+      },
+      "style": {
+        "stroke": {
+          "width": 2,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#E60000",
+            "alpha": 0.25
+          }
+        }
+      },
+      "path": {
+        "anchors": [],
+        "closed": false
+      },
+      "d": "M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+    },
+    "node-313": {
+      "id": "node-313",
+      "type": "path",
+      "name": "Tick",
+      "parentId": "node-311",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 160
+        }
+      },
+      "style": {
+        "stroke": {
+          "width": 2,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "#E60000",
+            "alpha": 1
+          }
+        }
+      },
+      "path": {
+        "anchors": [],
+        "closed": false
+      },
+      "d": "M8.25 12.75L10.5 15L15.75 9.75"
+    },
+    "node-314": {
+      "id": "node-314",
+      "type": "text",
+      "name": "Text",
+      "parentId": "node-309",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#D4D4D8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#D4D4D8"
+          }
+        ]
+      },
+      "text": {
+        "content": "Ceramic paint protection and headlight UV restoration",
+        "fontSize": 15,
+        "fontWeight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-315": {
+      "id": "node-315",
+      "type": "frame",
+      "name": "Facility Card",
+      "parentId": "node-284",
+      "childIds": [
+        "node-316",
+        "node-317",
+        "node-318",
+        "node-322",
+        "node-326"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 24,
+        "padding": {
+          "l": 40,
+          "r": 40,
+          "t": 40,
+          "b": 40,
+          "h": 40,
+          "v": 40
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 640
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#000000"
+        },
+        "radius": 24,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.12)",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#000000"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-316": {
+      "id": "node-316",
+      "type": "text",
+      "name": "Eyebrow",
+      "parentId": "node-315",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#E60000"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#E60000"
+          }
+        ]
+      },
+      "text": {
+        "content": "WORKSHOP & CONTACT",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-317": {
+      "id": "node-317",
+      "type": "text",
+      "name": "Facility Title",
+      "parentId": "node-315",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "State-of-the-art detailing bay in Richmond, CA.",
+        "fontSize": 26,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-318": {
+      "id": "node-318",
+      "type": "frame",
+      "name": "Info Card 1",
+      "parentId": "node-315",
+      "childIds": [
+        "node-319",
+        "node-320",
+        "node-321"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 6,
+        "padding": {
+          "l": 20,
+          "r": 20,
+          "t": 16,
+          "b": 16,
+          "h": 20,
+          "v": 16
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#141416"
+        },
+        "radius": 14,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.08)",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#141416"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-319": {
+      "id": "node-319",
+      "type": "text",
+      "name": "Label",
+      "parentId": "node-318",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FF1E27"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FF1E27"
+          }
+        ]
+      },
+      "text": {
+        "content": "VISIT OUR SHOP",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-320": {
+      "id": "node-320",
+      "type": "text",
+      "name": "Val",
+      "parentId": "node-318",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "1500 Carlson Blvd, Richmond, CA 94804",
+        "fontSize": 16,
+        "fontWeight": 600,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-321": {
+      "id": "node-321",
+      "type": "text",
+      "name": "Desc",
+      "parentId": "node-318",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "Conveniently located with dedicated indoor wash bays & climate-controlled ceramic cure room.",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-322": {
+      "id": "node-322",
+      "type": "frame",
+      "name": "Info Card 2",
+      "parentId": "node-315",
+      "childIds": [
+        "node-323",
+        "node-324",
+        "node-325"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 6,
+        "padding": {
+          "l": 20,
+          "r": 20,
+          "t": 16,
+          "b": 16,
+          "h": 20,
+          "v": 16
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#141416"
+        },
+        "radius": 14,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.08)",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#141416"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-323": {
+      "id": "node-323",
+      "type": "text",
+      "name": "Label",
+      "parentId": "node-322",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FF1E27"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FF1E27"
+          }
+        ]
+      },
+      "text": {
+        "content": "WORKING HOURS",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-324": {
+      "id": "node-324",
+      "type": "text",
+      "name": "Val",
+      "parentId": "node-322",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "Monday – Saturday: 8:00 AM – 6:00 PM",
+        "fontSize": 16,
+        "fontWeight": 600,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-325": {
+      "id": "node-325",
+      "type": "text",
+      "name": "Desc",
+      "parentId": "node-322",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "Sunday closed for deep facility maintenance.",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-326": {
+      "id": "node-326",
+      "type": "frame",
+      "name": "Info Card 3",
+      "parentId": "node-315",
+      "childIds": [
+        "node-327",
+        "node-328",
+        "node-329"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 6,
+        "padding": {
+          "l": 20,
+          "r": 20,
+          "t": 16,
+          "b": 16,
+          "h": 20,
+          "v": 16
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#141416"
+        },
+        "radius": 14,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.08)",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#141416"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-327": {
+      "id": "node-327",
+      "type": "text",
+      "name": "Label",
+      "parentId": "node-326",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FF1E27"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FF1E27"
+          }
+        ]
+      },
+      "text": {
+        "content": "DIRECT PHONE & RESERVATIONS",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-328": {
+      "id": "node-328",
+      "type": "text",
+      "name": "Val",
+      "parentId": "node-326",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "(510) 374-6211",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-329": {
+      "id": "node-329",
+      "type": "text",
+      "name": "Desc",
+      "parentId": "node-326",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "Call or text for instant quotes, package recommendations, or custom detailing requests.",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-330": {
+      "id": "node-330",
+      "type": "frame",
+      "name": "Pillars Section",
+      "parentId": "node-248",
+      "childIds": [
+        "node-331",
+        "node-332"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 32,
+        "padding": {
+          "l": 64,
+          "r": 64,
+          "t": 0,
+          "b": 0,
+          "h": 64,
+          "v": 0
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-331": {
+      "id": "node-331",
+      "type": "text",
+      "name": "Pillars Title",
+      "parentId": "node-330",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "WHY CLIENTS TRUST KES'S",
+        "fontSize": 28,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "center",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-332": {
+      "id": "node-332",
+      "type": "frame",
+      "name": "Pillars Grid",
+      "parentId": "node-330",
+      "childIds": [
+        "node-333",
+        "node-338",
+        "node-343"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 24,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1312
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-333": {
+      "id": "node-333",
+      "type": "frame",
+      "name": "Pillar Card - CRAFT",
+      "parentId": "node-332",
+      "childIds": [
+        "node-334",
+        "node-336",
+        "node-337"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 14,
+        "padding": {
+          "l": 32,
+          "r": 32,
+          "t": 32,
+          "b": 32,
+          "h": 32,
+          "v": 32
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 421
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#141416"
+        },
+        "radius": 20,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.1)",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#141416"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-334": {
+      "id": "node-334",
+      "type": "frame",
+      "name": "Pillar Badge",
+      "parentId": "node-333",
+      "childIds": [
+        "node-335"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 12,
+          "r": 12,
+          "t": 4,
+          "b": 4,
+          "h": 12,
+          "v": 4
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "rgba(255, 255, 255, 0.06)"
+        },
+        "radius": 9999,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.06)"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-335": {
+      "id": "node-335",
+      "type": "text",
+      "name": "Badge Text",
+      "parentId": "node-334",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#E60000"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#E60000"
+          }
+        ]
+      },
+      "text": {
+        "content": "CRAFT",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-336": {
+      "id": "node-336",
+      "type": "text",
+      "name": "Pillar Title",
+      "parentId": "node-333",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "Artisan Craftsmanship",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-337": {
+      "id": "node-337",
+      "type": "text",
+      "name": "Pillar Desc",
+      "parentId": "node-333",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "Every curve, badge, wheel spoke, and door jamb is cleaned by hand with zero shortcuts or harsh rotating brushes.",
+        "fontSize": 15,
+        "fontWeight": 400,
+        "lineHeight": 1.55,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-338": {
+      "id": "node-338",
+      "type": "frame",
+      "name": "Pillar Card - FORMULA",
+      "parentId": "node-332",
+      "childIds": [
+        "node-339",
+        "node-341",
+        "node-342"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 14,
+        "padding": {
+          "l": 32,
+          "r": 32,
+          "t": 32,
+          "b": 32,
+          "h": 32,
+          "v": 32
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 421
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#141416"
+        },
+        "radius": 20,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.1)",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#141416"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-339": {
+      "id": "node-339",
+      "type": "frame",
+      "name": "Pillar Badge",
+      "parentId": "node-338",
+      "childIds": [
+        "node-340"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 12,
+          "r": 12,
+          "t": 4,
+          "b": 4,
+          "h": 12,
+          "v": 4
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "rgba(255, 255, 255, 0.06)"
+        },
+        "radius": 9999,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.06)"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-340": {
+      "id": "node-340",
+      "type": "text",
+      "name": "Badge Text",
+      "parentId": "node-339",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#38BDF8"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#38BDF8"
+          }
+        ]
+      },
+      "text": {
+        "content": "FORMULA",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-341": {
+      "id": "node-341",
+      "type": "text",
+      "name": "Pillar Title",
+      "parentId": "node-338",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "Eco-Safe Chemistry",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-342": {
+      "id": "node-342",
+      "type": "text",
+      "name": "Pillar Desc",
+      "parentId": "node-338",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "We use pH-neutral, biodegradable citrus foams and pure silica ceramic sprays that protect your vehicle and the Bay Area waterways.",
+        "fontSize": 15,
+        "fontWeight": 400,
+        "lineHeight": 1.55,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-343": {
+      "id": "node-343",
+      "type": "frame",
+      "name": "Pillar Card - GUARANTEE",
+      "parentId": "node-332",
+      "childIds": [
+        "node-344",
+        "node-346",
+        "node-347"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 14,
+        "padding": {
+          "l": 32,
+          "r": 32,
+          "t": 32,
+          "b": 32,
+          "h": 32,
+          "v": 32
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 421
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#141416"
+        },
+        "radius": 20,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.1)",
+            "alpha": 1
+          }
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#141416"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-344": {
+      "id": "node-344",
+      "type": "frame",
+      "name": "Pillar Badge",
+      "parentId": "node-343",
+      "childIds": [
+        "node-345"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 12,
+          "r": 12,
+          "t": 4,
+          "b": 4,
+          "h": 12,
+          "v": 4
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "rgba(255, 255, 255, 0.06)"
+        },
+        "radius": 9999,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.06)"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-345": {
+      "id": "node-345",
+      "type": "text",
+      "name": "Badge Text",
+      "parentId": "node-344",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#E60000"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#E60000"
+          }
+        ]
+      },
+      "text": {
+        "content": "GUARANTEE",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-346": {
+      "id": "node-346",
+      "type": "text",
+      "name": "Pillar Title",
+      "parentId": "node-343",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "100% Satisfaction",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-347": {
+      "id": "node-347",
+      "type": "text",
+      "name": "Pillar Desc",
+      "parentId": "node-343",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#A1A1AA"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#A1A1AA"
+          }
+        ]
+      },
+      "text": {
+        "content": "We inspect your car under specialized lighting together before you drive off. If anything is imperfect, we fix it on the spot.",
+        "fontSize": 15,
+        "fontWeight": 400,
+        "lineHeight": 1.55,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-348": {
+      "id": "node-348",
+      "type": "frame",
+      "name": "Callout Section",
+      "parentId": "node-248",
+      "childIds": [
+        "node-349"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 64,
+          "r": 64,
+          "t": 16,
+          "b": 16,
+          "h": 64,
+          "v": 16
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-349": {
+      "id": "node-349",
+      "type": "frame",
+      "name": "Callout Banner",
+      "parentId": "node-348",
+      "childIds": [
+        "node-350",
+        "node-351",
+        "node-352"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 20,
+        "padding": {
+          "l": 64,
+          "r": 64,
+          "t": 64,
+          "b": 64,
+          "h": 64,
+          "v": 64
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 1312
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#B80005"
+        },
+        "radius": 24,
+        "shadows": [
+          {
+            "kind": "drop",
+            "x": 0,
+            "y": 20,
+            "blur": 40,
+            "spread": -5,
+            "color": "rgba(184, 0, 0, 0.4)"
+          }
+        ],
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#B80005"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-350": {
+      "id": "node-350",
+      "type": "text",
+      "name": "Banner Title",
+      "parentId": "node-349",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "Your Car Deserves the Best",
+        "fontSize": 44,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "center",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-351": {
+      "id": "node-351",
+      "type": "text",
+      "name": "Banner Subtitle",
+      "parentId": "node-349",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 720
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "Give your car the care, shine, and protection it deserves. Book a detailing appointment with Kes's Auto Detailing today and drive with confidence & style!",
+        "fontSize": 18,
+        "fontWeight": 400,
+        "lineHeight": 1.6,
+        "letterSpacing": 0,
+        "align": "center",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-352": {
+      "id": "node-352",
+      "type": "frame",
+      "name": "CTA Pill Button",
+      "parentId": "node-349",
+      "childIds": [
+        "node-353",
+        "node-354"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 16,
+        "padding": {
+          "l": 28,
+          "r": 6,
+          "t": 6,
+          "b": 6,
+          "h": 17,
+          "v": 6
+        },
+        "alignMain": "start",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 56
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "radius": 9999,
+        "shadows": [
+          {
+            "kind": "drop",
+            "x": 0,
+            "y": 10,
+            "blur": 20,
+            "spread": -3,
+            "color": "rgba(0,0,0,0.3)"
+          }
+        ],
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-353": {
+      "id": "node-353",
+      "type": "text",
+      "name": "Btn Text",
+      "parentId": "node-352",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#111827"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#111827"
+          }
+        ]
+      },
+      "text": {
+        "content": "Book Now",
+        "fontSize": 18,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-354": {
+      "id": "node-354",
+      "type": "frame",
+      "name": "Badge",
+      "parentId": "node-352",
+      "childIds": [
+        "node-355"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "center",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 44
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 44
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#111827"
+        },
+        "radius": 9999,
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#111827"
+          }
+        ]
+      },
+      "clipContent": false
+    },
+    "node-355": {
+      "id": "node-355",
+      "type": "svg",
+      "name": "Arrow SVG",
+      "parentId": "node-354",
+      "childIds": [
+        "node-356"
+      ],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 22
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 22
+        }
+      },
+      "style": {},
+      "viewBox": "0 0 24 24"
+    },
+    "node-356": {
+      "id": "node-356",
+      "type": "path",
+      "name": "Arrow Path",
+      "parentId": "node-355",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fixed",
+          "px": 240
+        },
+        "h": {
+          "kind": "fixed",
+          "px": 160
+        }
+      },
+      "style": {
+        "stroke": {
+          "width": 1.5,
+          "paint": {
+            "kind": "solid",
+            "color": "#1F1F1F",
+            "alpha": 1
+          }
+        },
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "path": {
+        "anchors": [],
+        "closed": false
+      },
+      "d": "M18.75 6V15.75C18.75 15.9489 18.671 16.1397 18.5303 16.2803C18.3897 16.421 18.1989 16.5 18 16.5C17.8011 16.5 17.6103 16.421 17.4697 16.2803C17.329 16.1397 17.25 15.9489 17.25 15.75V7.81031L6.53061 18.5306C6.38988 18.6714 6.19901 18.7504 5.99999 18.7504C5.80097 18.7504 5.6101 18.6714 5.46936 18.5306C5.32863 18.3899 5.24957 18.199 5.24957 18C5.24957 17.801 5.32863 17.6101 5.46936 17.4694L16.1897 6.75H8.24999C8.05108 6.75 7.86031 6.67098 7.71966 6.53033C7.57901 6.38968 7.49999 6.19891 7.49999 6C7.49999 5.80109 7.57901 5.61032 7.71966 5.46967C7.86031 5.32902 8.05108 5.25 8.24999 5.25H18C18.1989 5.25 18.3897 5.32902 18.5303 5.46967C18.671 5.61032 18.75 5.80109 18.75 6Z"
+    },
+    "node-357": {
+      "id": "node-357",
+      "type": "frame",
+      "name": "Footer",
+      "parentId": "node-248",
+      "childIds": [
+        "node-358",
+        "node-361"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "row",
+        "wrap": false,
+        "reverse": false,
+        "gap": 0,
+        "padding": {
+          "l": 64,
+          "r": 64,
+          "t": 32,
+          "b": 32,
+          "h": 64,
+          "v": 32
+        },
+        "alignMain": "space-between",
+        "alignCross": "center"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fill"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "stroke": {
+          "width": 1,
+          "style": "solid",
+          "align": "inside",
+          "paint": {
+            "kind": "solid",
+            "color": "rgba(255, 255, 255, 0.08)",
+            "alpha": 1
+          }
+        },
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-358": {
+      "id": "node-358",
+      "type": "frame",
+      "name": "Footer Left",
+      "parentId": "node-357",
+      "childIds": [
+        "node-359",
+        "node-360"
+      ],
+      "layout": {
+        "mode": "flex",
+        "direction": "column",
+        "wrap": false,
+        "reverse": false,
+        "gap": 6,
+        "padding": {
+          "l": 0,
+          "t": 0,
+          "r": 0,
+          "b": 0,
+          "h": 0,
+          "v": 0
+        },
+        "alignMain": "start",
+        "alignCross": "start"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": null,
+        "radius": 0,
+        "fills": []
+      },
+      "clipContent": false
+    },
+    "node-359": {
+      "id": "node-359",
+      "type": "text",
+      "name": "Brand",
+      "parentId": "node-358",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#FFFFFF"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#FFFFFF"
+          }
+        ]
+      },
+      "text": {
+        "content": "KES'S AUTO DETAILING",
+        "fontSize": 16,
+        "fontWeight": 700,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Orbitron"
+      }
+    },
+    "node-360": {
+      "id": "node-360",
+      "type": "text",
+      "name": "Address",
+      "parentId": "node-358",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#71717A"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#71717A"
+          }
+        ]
+      },
+      "text": {
+        "content": "1500 Carlson Blvd, Richmond, CA 94804 • (510) 374-6211",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
+    },
+    "node-361": {
+      "id": "node-361",
+      "type": "text",
+      "name": "Copyright",
+      "parentId": "node-357",
+      "childIds": [],
+      "layout": {
+        "mode": "freeform"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "w": {
+          "kind": "fit"
+        },
+        "h": {
+          "kind": "fit"
+        }
+      },
+      "style": {
+        "fill": {
+          "kind": "solid",
+          "color": "#71717A"
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "color": "#71717A"
+          }
+        ]
+      },
+      "text": {
+        "content": "© 2026 Kes's Auto Detailing. All rights reserved.",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "lineHeight": 1.25,
+        "letterSpacing": 0,
+        "align": "left",
+        "fontFamily": "Instrument Sans"
+      }
     }
   },
   "pages": [
@@ -66827,6 +72016,14 @@
       "background": "#0D0E15",
       "rootNodeIds": [
         "node-1"
+      ]
+    },
+    {
+      "id": "page-3",
+      "name": "About",
+      "background": "#0A0A0C",
+      "rootNodeIds": [
+        "node-248"
       ]
     }
   ],
@@ -67185,6 +72382,6 @@
   ],
   "comments": [],
   "createdBy": "you",
-  "thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAQDAwMDAgQDAwMEBAQFBgoGBgUFBgwICQcKDgwPDg4MDQ0PERYTDxAVEQ0NExoTFRcYGRkZDxIbHRsYHRYYGRj/2wBDAQQEBAYFBgsGBgsYEA0QGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBj/wAARCAE2AeADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//9k=",
-  "updatedAt": "2026-11-09T03:12:09.372Z"
+  "thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAQDAwMDAgQDAwMEBAQFBgoGBgUFBgwICQcKDgwPDg4MDQ0PERYTDxAVEQ0NExoTFRcYGRkZDxIbHRsYHRYYGRj/2wBDAQQEBAYFBgsGBgsYEA0QGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBj/wAARCAE2AeADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAIE/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AhsBoSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//9k=",
+  "updatedAt": "2026-11-09T03:16:35.594Z"
 }
