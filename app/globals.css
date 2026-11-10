@@ -104,6 +104,65 @@
   --cursor-eye-dropper: url('/cursors/all/cursor-eye-dropper-sm.webp') 4 24, default;
 }
 
+/* ============================================================================
+   DARK MODE — editor chrome follows the OS/browser colour preference.
+   Only UI surfaces are remapped here. Canvas design nodes are NEVER touched
+   (they carry their own document colours and must render identically in any OS
+   theme — that isolation is applied to [data-node-id] elements, NOT here).
+   ============================================================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    /* surfaces */
+    --surface-canvas:  #1c1c1f; /* canvas gutter — dark neutral */
+    --surface-panel:   #18181a; /* sidebars & top bar */
+    --surface-content: #111113; /* menus, fields, inputs */
+    --surface-card:    #1e1e22; /* file-card previews */
+    --surface-hover:   #2a2a2e; /* hover wash */
+    --line:            #2e2e32; /* 1 px dividers */
+    --border-default:  #2e2e32;
+
+    /* text */
+    --text-1:         #ededed;
+    --text-2:         #a1a1aa;
+    --text-primary:   #ededed;
+    --text-secondary: #a1a1aa;
+
+    /* buttons */
+    --btn-primary-bg:   #f4f4f5;
+    --btn-primary-text: #18181b;
+  }
+}
+
+/* Class-based dark mode (for future manual toggle support) */
+:root.dark,
+.dark {
+  color-scheme: dark;
+  --surface-canvas:  #1c1c1f;
+  --surface-panel:   #18181a;
+  --surface-content: #111113;
+  --surface-card:    #1e1e22;
+  --surface-hover:   #2a2a2e;
+  --line:            #2e2e32;
+  --border-default:  #2e2e32;
+  --text-1:         #ededed;
+  --text-2:         #a1a1aa;
+  --text-primary:   #ededed;
+  --text-secondary: #a1a1aa;
+  --btn-primary-bg:   #f4f4f5;
+  --btn-primary-text: #18181b;
+}
+
+/* Canvas design nodes must NEVER be recoloured by the browser's colour scheme.
+   Their fills/strokes come from the document model and are always "light"
+   from the editor's perspective. Only the nodes themselves — not the gutter. */
+[data-node-id],
+[data-node-id] * {
+  color-scheme: light only;
+}
+
 /* Paper cursor helper classes */
 .custom-cursor-arrow { cursor: var(--cursor-default); }
 .custom-cursor-arrow-bend-edge { cursor: var(--cursor-rotate); }
@@ -155,7 +214,7 @@ body {
   appearance: none;
   width: 100%;
   height: 12px;
-  background: #e2e2e2;
+  background: var(--line);
   border-radius: 9999px;
   outline: none;
   margin: 0;
@@ -168,26 +227,26 @@ body {
   width: 22px;
   height: 12px;
   border-radius: 9999px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  background: var(--surface-content);
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
 .radius-slider::-webkit-slider-thumb:hover {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 .radius-slider::-moz-range-thumb {
   width: 22px;
   height: 12px;
   border-radius: 9999px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  background: var(--surface-content);
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
 .radius-slider::-moz-range-track {
   height: 12px;
-  background: #e2e2e2;
+  background: var(--line);
   border-radius: 9999px;
 }
 

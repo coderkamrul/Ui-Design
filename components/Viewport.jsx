@@ -137,6 +137,40 @@ const DEFAULT_FRAME_SIZE = { w: 320, h: 240 };
 const DEFAULT_ELLIPSE_SIZE = { w: 120, h: 80 };
 
 /**
+ * Read our own clipboard payload before treating its HTML wrapper as an
+ * external website snapshot. The marker intentionally lives in an HTML
+ * comment so pasting into ordinary documents remains harmless, therefore a
+ * DOM query cannot be relied on here.
+ */
+function extractCanvasClipboardPayload(html) {
+  if (typeof html !== "string" || !html.includes("paper-paste-start")) return null;
+  const match = /<paper-paste-start\b[^>]*\bdata-embed\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i.exec(html);
+  const encoded = match?.[1] ?? match?.[2] ?? match?.[3];
+  if (!encoded) return null;
+
+  // Clipboard HTML can be entity-encoded once or twice by the browser/OS.
+  let json = encoded;
+  for (let i = 0; i < 2; i += 1) {
+    json = json
+      .replace(/&quot;|&#34;|&#x22;/gi, '"')
+      .replace(/&apos;|&#39;|&#x27;/gi, "'")
+      .replace(/&lt;|&#60;|&#x3c;/gi, "<")
+      .replace(/&gt;|&#62;|&#x3e;/gi, ">")
+      .replace(/&amp;/gi, "&");
+  }
+  try {
+    const payload = JSON.parse(json);
+    return payload?.type === "canvas-nodes-clip" &&
+      Array.isArray(payload.rootIds) &&
+      payload.nodes && typeof payload.nodes === "object"
+      ? payload
+      : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Cursor-chat bubble (depth-gap batch): white pill, dark text, small
  * tail pointing down-left toward the cursor it belongs to. Rendered
  * for peers (from their presence chat field) and for ourselves.
@@ -502,10 +536,28 @@ export default function Viewport() {
         return;
       }
 
-      // 4. Check for Paper Design Snapshot (<x-paper-html>) or HTML payload
-      let payload = null;
-      if (!html && text && (text.includes("<x-paper-html") || text.includes("paper-snapshot") || text.includes("paper-paste-start") || text.includes("data-embed=") || looksLikeHtml(text))) {
-        html = text;
+      // 4. Check for the editor's serialized clipboard first. Its HTML is
+      // deliberately wrapped as a Paper-compatible comment, so importing it
+      // as a website snapshot would create only the empty placeholder.
+      let payload = extractCanvasClipboardPayload(html);
+      if (!payload && text) {
+        let candidate = text.trim();
+        if (candidate.includes("return (") || candidate.includes("return <")) {
+          const retMatch = candidate.match(/return\s*\(\s*(<[\s\S]*>)\s*\)/) || candidate.match(/return\s*(<[\s\S]*>;?)/);
+          if (retMatch) candidate = retMatch[1];
+        }
+        candidate = candidate.replace(/className=/g, "class=").replace(/{\/\*[\s\S]*?\*\/}/g, "");
+        if (
+          candidate.includes("<x-paper-html") ||
+          candidate.includes("paper-snapshot") ||
+          candidate.includes("paper-paste-start") ||
+          candidate.includes("data-embed=") ||
+          looksLikeHtml(candidate) ||
+          (candidate.startsWith("<") && (candidate.includes("<div") || candidate.includes("<section") || candidate.includes("<nav") || candidate.includes("<header") || candidate.includes("<footer") || candidate.includes("<main") || candidate.includes("<article")))
+        ) {
+          html = candidate;
+          payload = extractCanvasClipboardPayload(html);
+        }
       }
 
       const isFormattedHtml =
@@ -522,7 +574,7 @@ export default function Viewport() {
           html.includes("<footer") ||
           html.includes("<main"));
 
-      if (isFormattedHtml) {
+      if (!payload && isFormattedHtml) {
         let htmlPayload = null;
 
         // Primary: Comprehensive snapshot-to-canvas converter with browser measurement,
@@ -555,15 +607,16 @@ export default function Viewport() {
           // no shadows, no images), offer "Paste as Image" so the design still
           // appears on canvas with its colors intact.
           if (!importedNodesHaveStyling(payload)) {
-            st.showToast({
-              message: "Paste lost styles (Snap/Figma CSS classes).",
-              actionLabel: "Paste as Image",
-              onAction: () => {
-                if (html) pasteHtmlAsImage(html);
-              },
-              duration: 6000,
-            });
-            return; // don't import unstyled nodes
+            for (const rid of payload.rootIds) {
+              const r = payload.nodes[rid];
+              if (r && r.type === "frame" && (!r.style?.fill || r.style.fill.kind === "none") && (!r.style?.fills?.length)) {
+                r.style = {
+                  ...(r.style || {}),
+                  fill: { kind: "solid", color: "#FFFFFF", alpha: 1 },
+                  borders: [{ width: 1, color: "#E2E8F0", style: "solid" }],
+                };
+              }
+            }
           }
         }
       }
@@ -674,10 +727,24 @@ export default function Viewport() {
         }
 
         if (newRootIds.length) {
+          if (!Array.isArray(activePg.rootNodeIds)) activePg.rootNodeIds = [];
           activePg.rootNodeIds.unshift(...newRootIds);
           st.commitSnapshot(structuredClone(st.doc));
           useEditorStore.setState({ doc: nextDoc });
           st.setSelection(newRootIds);
+          // A paste can be much larger than the current design or be placed
+          // beside existing frames. Move the viewport to it so a successful
+          // import never looks like it silently failed off-screen.
+          const importedRects = newRootIds
+            .map((id) => G.absoluteRect(nextDoc.nodes, id))
+            .filter((rect) => rect && rect.w > 0 && rect.h > 0);
+          if (importedRects.length) {
+            const bounds = G.rectUnion(importedRects);
+            const size = st.canvasSize;
+            const leftOff = st.uiMode === "full" ? 300 : 0;
+            const rightOff = st.uiMode !== "hidden" ? 280 : 0;
+            st.setViewport(G.fitViewport(bounds, size, 64, { left: leftOff, right: rightOff }));
+          }
           st.showToast({
             message: newRootIds.length === 1 ? "Layer pasted" : `${newRootIds.length} layers pasted`,
           });
@@ -878,8 +945,10 @@ export default function Viewport() {
         const n = payload.nodes[id];
         if (!n) return false;
         const style = n.style || {};
-        // Has fill, border, shadow, image, or svg markup?
+        // Has fill, border, shadow, image, text, or svg markup?
         if (
+          n.type === "text" ||
+          Boolean(n.text?.content) ||
           style.fill?.kind !== "none" ||
           style.fills?.some((f) => f && f.kind !== "none") ||
           style.borders?.length ||
@@ -1710,13 +1779,16 @@ export default function Viewport() {
         }
       }
 
-      // 2. Check for HTML from Paper Design (<x-paper-html>) or Paper embed payload
+      // 2. Clipboard HTML is importable even when it is not a Paper snapshot.
+      // Some applications put useful markup only in text/html and leave
+      // text/plain empty, which previously made Ctrl+V appear to do nothing.
       const html = e.clipboardData?.getData("text/html");
       const text = e.clipboardData?.getData("text/plain")?.trim();
 
       if (
         html &&
-        (html.includes("<x-paper-html") ||
+        (looksLikeHtml(html) ||
+          html.includes("<x-paper-html") ||
           html.includes("paper-snapshot") ||
           html.includes("paper-paste-start") ||
           html.includes("data-embed="))
@@ -4437,7 +4509,17 @@ export default function Viewport() {
       data-canvas-viewport="true"
       tabIndex={0}
       className="relative flex-1 w-full h-full min-h-0 min-w-0 overflow-hidden outline-none"
-      style={{ background: page?.background || "var(--surface-canvas)", cursor: effectiveCursor }}
+      style={{
+        // If the page has no background or it's the default canvas gray (#eeeeee),
+        // use the CSS variable so dark mode can remap it via --surface-canvas.
+        // Any other explicitly-set page color (e.g. #0D0E15 on the Design System
+        // page) is kept as-is because the user intentionally chose it.
+        background:
+          !page?.background || /^#(?:ee){3}$/i.test(page.background.trim())
+            ? "var(--surface-canvas)"
+            : page.background,
+        cursor: effectiveCursor,
+      }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerEnter={() => {
